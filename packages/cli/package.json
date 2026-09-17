@@ -1,0 +1,14 @@
+{
+  "name": "gotlui",
+  "version": "0.0.1",
+  "description": "CLI to add gotlUI components to your project",
+  "type": "module",
+  "bin": {
+    "gotlui": "./bin/gotlui.js"
+  },
+  "files": [
+    "bin",
+    "registry"
+  ],
+  "license": "MIT"
+}

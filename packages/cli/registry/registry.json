@@ -1,0 +1,6 @@
+{
+  "button": {
+    "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+    "files": []
+  }
+}
