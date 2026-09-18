@@ -13,7 +13,7 @@ export default function Navbar() {
           <a href="#blocks" className="transition-colors hover:text-white">
             Blocks
           </a>
-          <a href="#components" className="transition-colors hover:text-white">
+          <a href="/components" className="transition-colors hover:text-white">
             Components
           </a>
           <a href="#templates" className="transition-colors hover:text-white">
