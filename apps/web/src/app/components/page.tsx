@@ -2,6 +2,7 @@ import Link from "next/link"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import InputMic from "@/components/InputMic"
+import Button from "@/components/Buttons"
 
 const components = [
   {
@@ -9,18 +10,29 @@ const components = [
     name: "Input Mic",
     description: "Chat input with a mic button, live waveform, and optional speech-to-text.",
     available: true,
+    preview: (
+      <div className="pointer-events-none scale-90">
+        <InputMic />
+      </div>
+    ),
   },
   {
     slug: "button",
     name: "Button",
-    description: "Animated button with variants.",
-    available: false,
+    description: "Styled button variants: sizes, light, destructive, and loading states.",
+    available: true,
+    preview: (
+      <div className="pointer-events-none scale-[0.6]">
+        <Button />
+      </div>
+    ),
   },
   {
     slug: "card",
     name: "Card",
     description: "Content card with hover motion.",
     available: false,
+    preview: null,
   },
 ]
 
@@ -46,9 +58,7 @@ export default function ComponentsPage() {
                   className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/20 hover:bg-white/[0.06]"
                 >
                   <div className="mb-6 flex h-32 items-center justify-center overflow-hidden rounded-lg bg-zinc-950">
-                    <div className="pointer-events-none scale-90">
-                      <InputMic />
-                    </div>
+                    {c.preview}
                   </div>
                   <h3 className="font-medium text-white">{c.name}</h3>
                   <p className="mt-1 text-sm text-zinc-500">{c.description}</p>
