@@ -8,6 +8,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import InputMic from "@/components/InputMic";
 import Button from "@/components/Buttons";
+import TextReveal from "@/components/TextReveal";
 
 
 export default function Home() {
@@ -21,7 +22,12 @@ export default function Home() {
         <Pricing />
         <FAQ />
         <CTA />
-        
+         <div style={{ padding: "4rem", fontFamily: "sans-serif" }}>
+      <TextReveal
+        text="This sentence reveals itself one word at a time with a blur effect."
+        className="text-4xl font-bold"
+      />
+   </div>
       
       </main>
       <Footer />
