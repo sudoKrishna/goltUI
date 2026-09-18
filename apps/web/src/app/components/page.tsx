@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import InputMic from "@/components/InputMic"
 import Button from "@/components/Buttons"
+import TextReveal from "@/components/TextReveal"
 
 const components = [
   {
@@ -24,6 +25,17 @@ const components = [
     preview: (
       <div className="pointer-events-none scale-[0.6]">
         <Button />
+      </div>
+    ),
+  },
+  {
+    slug: "text-reveal",
+    name: "Text Reveal",
+    description: "A stylish effect that sequentially fades in text, creating a dynamic reveal.",
+    available: true,
+    preview: (
+      <div className="pointer-events-none scale-90 px-4 text-center text-sm text-white">
+        <TextReveal text="Fades in word by word." />
       </div>
     ),
   },
