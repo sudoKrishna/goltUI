@@ -33,5 +33,12 @@
     "files": [
       { "source": "button-spinner.tsx", "target": "components/gotlui/button-spinner.tsx" }
     ]
+  },
+  "text-reveal": {
+    "description": "Sequentially fades in text word-by-word with an optional blur effect.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "text-reveal.tsx", "target": "components/gotlui/text-reveal.tsx" }
+    ]
   }
 }
