@@ -1,6 +1,37 @@
 {
+  "input-mic": {
+    "description": "A chat-style text input with a mic button: animated waveform driven by real microphone input, and optional live speech-to-text.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "input-mic.tsx", "target": "components/gotlui/input-mic.tsx" }
+    ]
+  },
   "button": {
-    "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
-    "files": []
+    "description": "The base button, dark and light variants.",
+    "dependencies": [],
+    "files": [
+      { "source": "button.tsx", "target": "components/gotlui/button.tsx" }
+    ]
+  },
+  "button-sizes": {
+    "description": "Button sizes: Extra Small, Small, Default, Large.",
+    "dependencies": [],
+    "files": [
+      { "source": "button-sizes.tsx", "target": "components/gotlui/button-sizes.tsx" }
+    ]
+  },
+  "button-destructive": {
+    "description": "Destructive button variant.",
+    "dependencies": [],
+    "files": [
+      { "source": "button-destructive.tsx", "target": "components/gotlui/button-destructive.tsx" }
+    ]
+  },
+  "button-spinner": {
+    "description": "Loading buttons with a spinner: Downloading and Uploading.",
+    "dependencies": [],
+    "files": [
+      { "source": "button-spinner.tsx", "target": "components/gotlui/button-spinner.tsx" }
+    ]
   }
 }

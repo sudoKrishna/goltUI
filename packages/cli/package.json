@@ -10,5 +10,12 @@
     "bin",
     "registry"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "framer-motion": "^13.4.0",
+    "react": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0"
+  }
 }

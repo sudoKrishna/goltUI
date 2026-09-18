@@ -1,14 +1,98 @@
 #!/usr/bin/env node
 
-// Entry point for `npx gotlui <command>`.
-//
-// TODO (you write this):
-// 1. Parse process.argv — expect something like: gotlui add button
-// 2. Read ../registry/registry.json to find the "button" entry
-// 3. Read the component's source file(s) from ../registry
-// 4. Write them into the user's project (process.cwd()), creating folders as needed
-// 5. Detect the user's package manager (package-lock.json / bun.lock / pnpm-lock.yaml / yarn.lock)
-//    and run an install for the component's listed dependencies
-// 6. Print a success message with an import example
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
 
-console.log("gotlui CLI — not implemented yet");
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const registryDir = path.join(__dirname, "..", "registry");
+const registry = JSON.parse(
+  fs.readFileSync(path.join(registryDir, "registry.json"), "utf8")
+);
+
+function detectPackageManager(cwd) {
+  if (fs.existsSync(path.join(cwd, "bun.lock")) || fs.existsSync(path.join(cwd, "bun.lockb"))) return "bun";
+  if (fs.existsSync(path.join(cwd, "pnpm-lock.yaml"))) return "pnpm";
+  if (fs.existsSync(path.join(cwd, "yarn.lock"))) return "yarn";
+  return "npm";
+}
+
+function installCommand(pm, deps) {
+  switch (pm) {
+    case "bun":
+      return `bun add ${deps.join(" ")}`;
+    case "pnpm":
+      return `pnpm add ${deps.join(" ")}`;
+    case "yarn":
+      return `yarn add ${deps.join(" ")}`;
+    default:
+      return `npm install ${deps.join(" ")}`;
+  }
+}
+
+// Projects using a src/ layout get files under src/, otherwise the root.
+function resolveBase(cwd) {
+  return fs.existsSync(path.join(cwd, "src")) ? path.join(cwd, "src") : cwd;
+}
+
+function add(name) {
+  const entry = registry[name];
+  if (!entry) {
+    console.error(`\nNo component named "${name}" in the registry.`);
+    console.error(`Available: ${Object.keys(registry).join(", ")}\n`);
+    process.exit(1);
+  }
+
+  if (!entry.files || entry.files.length === 0) {
+    console.error(`\n"${name}" isn't implemented in the registry yet.\n`);
+    process.exit(1);
+  }
+
+  const cwd = process.cwd();
+  const base = resolveBase(cwd);
+
+  for (const file of entry.files) {
+    const sourcePath = path.join(registryDir, file.source);
+    const targetPath = path.join(base, file.target);
+
+    fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+
+    if (fs.existsSync(targetPath)) {
+      console.log(`Skipped (already exists): ${path.relative(cwd, targetPath)}`);
+      continue;
+    }
+
+    fs.copyFileSync(sourcePath, targetPath);
+    console.log(`Added: ${path.relative(cwd, targetPath)}`);
+  }
+
+  if (entry.dependencies?.length) {
+    const pm = detectPackageManager(cwd);
+    const cmd = installCommand(pm, entry.dependencies);
+    console.log(`\nInstalling dependencies with ${pm}: ${entry.dependencies.join(", ")}`);
+    execSync(cmd, { cwd, stdio: "inherit" });
+  }
+
+  const componentName = name
+    .split("-")
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join("");
+
+  console.log(`\nDone. Import it with:\n`);
+  console.log(`  import ${componentName} from "@/components/gotlui/${name}"\n`);
+}
+
+const [, , command, name] = process.argv;
+
+if (command === "add" && name) {
+  add(name);
+} else {
+  console.log(`
+Usage:
+  gotlui add <component>
+
+Available components:
+  ${Object.keys(registry).join("\n  ")}
+`);
+}
