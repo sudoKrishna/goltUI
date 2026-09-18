@@ -7,6 +7,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import InputMic from "@/components/InputMic";
+import Button from "@/components/Buttons";
 
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
         <FAQ />
         <CTA />
         
-        <InputMic />
+      
       </main>
       <Footer />
     </div>
