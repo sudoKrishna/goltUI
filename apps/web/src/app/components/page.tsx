@@ -40,6 +40,18 @@ const components = [
     ),
   },
   {
+    slug: "text-scroll",
+    name: "Text Scroll Animation",
+    description: "Scroll-driven text and icon animation with 3 variants, powered by Lenis.",
+    available: true,
+    preview: (
+      <div className="flex flex-col items-center justify-center gap-1 text-xs text-zinc-500">
+        <span className="text-2xl font-bold uppercase tracking-tighter text-white">Scroll</span>
+        <span>opens as a full-page preview</span>
+      </div>
+    ),
+  },
+  {
     slug: "card",
     name: "Card",
     description: "Content card with hover motion.",
