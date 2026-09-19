@@ -10,7 +10,7 @@ export default function Navbar() {
         </a>
 
         <div className="hidden items-center gap-8 text-sm text-zinc-400 md:flex">
-          <a href="#blocks" className="transition-colors hover:text-white">
+          <a href="/blocks" className="transition-colors hover:text-white">
             Blocks
           </a>
           <a href="/components" className="transition-colors hover:text-white">
