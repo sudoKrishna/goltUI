@@ -40,5 +40,61 @@
     "files": [
       { "source": "text-reveal.tsx", "target": "components/gotlui/text-reveal.tsx" }
     ]
+  },
+  "hero-section": {
+    "description": "Hero block with a cursor-reactive grid background and a gradient headline.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "hero-section.tsx", "target": "components/gotlui/hero-section.tsx" }
+    ]
+  },
+  "hero-section-two": {
+    "description": "Hero block with an animated glowing gradient blob background.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "hero-section-two.tsx", "target": "components/gotlui/hero-section-two.tsx" }
+    ]
+  },
+  "logo-cloud": {
+    "description": "8-logo grid that drops in row by row, with a heading and subtext.",
+    "dependencies": ["framer-motion", "@icons-pack/react-simple-icons"],
+    "files": [
+      { "source": "logo-cloud.tsx", "target": "components/gotlui/logo-cloud.tsx" },
+      { "source": "logos.ts", "target": "components/gotlui/logos.ts" }
+    ]
+  },
+  "logo-cloud-two": {
+    "description": "Logo cloud with a heading, subtext, marquee, and a CTA button.",
+    "dependencies": ["framer-motion", "@icons-pack/react-simple-icons"],
+    "files": [
+      { "source": "logo-cloud-two.tsx", "target": "components/gotlui/logo-cloud-two.tsx" },
+      { "source": "LogoMarqueeRow.tsx", "target": "components/gotlui/LogoMarqueeRow.tsx" },
+      { "source": "logos.ts", "target": "components/gotlui/logos.ts" }
+    ]
+  },
+  "mouse-follow": {
+    "description": "Four cursor-following effects: direct, spring, velocity-stretch blob, and magnetic pull. Simple/Spring adapted from Skiper UI, credit required.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "mouse-follow.tsx", "target": "components/gotlui/mouse-follow.tsx" }
+    ],
+    "import": {
+      "name": "MouseFollowShowcase",
+      "path": "@/components/gotlui/mouse-follow"
+    }
+  },
+  "text-scroll": {
+    "description": "Scroll-driven text and icon animation (3 variants) with Lenis smooth scroll. Adapted from Skiper UI, credit required.",
+    "dependencies": ["framer-motion", "lenis", "@icons-pack/react-simple-icons"],
+    "files": [
+      { "source": "text-scroll/TextScrollAnimation.tsx", "target": "components/gotlui/text-scroll/TextScrollAnimation.tsx" },
+      { "source": "text-scroll/CharacterV1.tsx", "target": "components/gotlui/text-scroll/CharacterV1.tsx" },
+      { "source": "text-scroll/CharacterV2.tsx", "target": "components/gotlui/text-scroll/CharacterV2.tsx" },
+      { "source": "text-scroll/CharacterV3.tsx", "target": "components/gotlui/text-scroll/CharacterV3.tsx" }
+    ],
+    "import": {
+      "name": "TextScrollAnimation",
+      "path": "@/components/gotlui/text-scroll/TextScrollAnimation"
+    }
   }
 }
