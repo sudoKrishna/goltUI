@@ -67,6 +67,22 @@ function add(name) {
     console.log(`Added: ${path.relative(cwd, targetPath)}`);
   }
 
+  // Assets (e.g. public/ images) always resolve from the project root,
+  // never under src/, regardless of the project's layout.
+  for (const asset of entry.assets ?? []) {
+    const sourcePath = path.join(registryDir, asset.source);
+    const targetPath = path.join(cwd, asset.target);
+
+    if (fs.existsSync(targetPath)) {
+      console.log(`Skipped (already exists): ${path.relative(cwd, targetPath)}`);
+      continue;
+    }
+
+    fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+    fs.cpSync(sourcePath, targetPath, { recursive: true });
+    console.log(`Added: ${path.relative(cwd, targetPath)}`);
+  }
+
   if (entry.dependencies?.length) {
     const pm = detectPackageManager(cwd);
     const cmd = installCommand(pm, entry.dependencies);
@@ -74,13 +90,20 @@ function add(name) {
     execSync(cmd, { cwd, stdio: "inherit" });
   }
 
-  const componentName = name
-    .split("-")
-    .map((part) => part[0].toUpperCase() + part.slice(1))
-    .join("");
+  // Entries can override the printed import (needed when the export name
+  // or file path doesn't match the plain slug->PascalCase guess, e.g.
+  // nested folders or a differently-named main file).
+  const componentName =
+    entry.import?.name ??
+    name
+      .split("-")
+      .map((part) => part[0].toUpperCase() + part.slice(1))
+      .join("");
+  const importPath =
+    entry.import?.path ?? `@/components/gotlui/${name}`;
 
   console.log(`\nDone. Import it with:\n`);
-  console.log(`  import ${componentName} from "@/components/gotlui/${name}"\n`);
+  console.log(`  import ${componentName} from "${importPath}"\n`);
 }
 
 const [, , command, name] = process.argv;
