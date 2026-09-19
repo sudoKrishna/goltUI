@@ -52,6 +52,18 @@ const components = [
     ),
   },
   {
+    slug: "mouse-follow",
+    name: "Mouse Follow",
+    description: "Four cursor-following effects: direct, spring, velocity-stretch blob, and magnetic pull.",
+    available: true,
+    preview: (
+      <div className="flex flex-col items-center justify-center gap-1 text-xs text-zinc-500">
+        <span className="h-8 w-8 rounded-full bg-white" />
+        <span className="mt-2">hover to try it on its page</span>
+      </div>
+    ),
+  },
+  {
     slug: "card",
     name: "Card",
     description: "Content card with hover motion.",
