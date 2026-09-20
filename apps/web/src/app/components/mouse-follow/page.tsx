@@ -1,21 +1,23 @@
-import Link from "next/link"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import CodeBlock from "@/components/CodeBlock"
-import { MagneticMouseFollow } from "@/components/mouse/MouseFollow"
+import {
+  SimpleMouseFollow,
+  SpringMouseFollow,
+  VelocityStretchMouseFollow,
+  LinkHoverImageCursor,
+} from "@/components/mouse/MouseFollow"
 
-const variants = [
-  { name: "SimpleMouseFollow", desc: "A dot that tracks the pointer directly, no easing." },
-  { name: "SpringMouseFollow", desc: "Tracks the pointer through a spring, with fade + scale in on hover." },
-  { name: "VelocityStretchMouseFollow", desc: "Stretches and squashes along its direction of travel based on real pointer velocity — a liquid blob feel." },
-  { name: "MagneticMouseFollow", desc: "A centered dot gets pulled toward the cursor the closer it gets, snapping back when the cursor leaves." },
-]
+const usageCode = `import {
+  SimpleMouseFollow,
+  SpringMouseFollow,
+  VelocityStretchMouseFollow,
+  LinkHoverImageCursor,
+} from "@/components/gotlui/mouse-follow"
 
-const usageCode = `import { MagneticMouseFollow } from "@/components/gotlui/mouse-follow"
-
-export default function Page() {
-  return <MagneticMouseFollow />
-}`
+// Native cursor everywhere, except hovering a link/button —
+// then this image follows the pointer instead:
+<LinkHoverImageCursor src="/cursors/lip-bite.png" size={120} />`
 
 export default function MouseFollowDocsPage() {
   return (
@@ -26,53 +28,63 @@ export default function MouseFollowDocsPage() {
           <h1 className="text-3xl font-semibold text-white sm:text-4xl">Mouse Follow</h1>
           <p className="mt-3 text-zinc-400">
             Four cursor-following effects built on Framer Motion springs — from
-            a direct 1:1 tracker to physics-based blobs and magnetic pulls.
+            a direct 1:1 tracker to physics-based blobs and a link-hover image swap.
           </p>
 
-          <div className="mt-10 flex justify-center overflow-hidden rounded-2xl border border-white/10 bg-black">
-            <MagneticMouseFollow />
-          </div>
-          <p className="mt-3 text-center text-xs text-zinc-600">
-            Move your cursor over the box above — this is the Magnetic Pull variant.
-          </p>
-
-          <div className="mt-8 text-center">
-            <Link
-              href="/preview/mouse-follow"
-              target="_blank"
-              className="inline-block rounded-lg border border-white/15 bg-black px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-white/30"
-            >
-              Open full preview (all 4, scroll-snap)
-            </Link>
-          </div>
-
-          <h2 className="mt-14 mb-3 text-lg font-medium text-white">Installation</h2>
+          <h2 className="mt-10 mb-3 text-lg font-medium text-white">Installation</h2>
           <CodeBlock code="npx gotlui add mouse-follow" />
 
           <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
           <CodeBlock label="page.tsx" code={usageCode} />
 
-          <h2 className="mt-10 mb-4 text-lg font-medium text-white">Variants</h2>
-          <div className="overflow-hidden rounded-xl border border-white/10">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b border-white/10 bg-white/[0.03] text-zinc-400">
-                  <th className="px-4 py-3 font-medium">Export</th>
-                  <th className="px-4 py-3 font-medium">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                {variants.map((v, i) => (
-                  <tr key={v.name} className={i !== variants.length - 1 ? "border-b border-white/5" : ""}>
-                    <td className="px-4 py-3 font-mono text-xs text-white">{v.name}</td>
-                    <td className="px-4 py-3 text-zinc-400">{v.desc}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <h2 className="mt-14 mb-6 text-lg font-medium text-white">All variants</h2>
+
+          <div className="flex flex-col gap-14">
+            <div>
+              <h3 className="font-mono text-sm text-white">SimpleMouseFollow</h3>
+              <p className="mt-1 text-sm text-zinc-400">
+                A dot that tracks the pointer directly, no easing.
+              </p>
+              <div className="mt-4 flex justify-center overflow-hidden rounded-2xl border border-white/10 bg-black">
+                <SimpleMouseFollow />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-mono text-sm text-white">SpringMouseFollow</h3>
+              <p className="mt-1 text-sm text-zinc-400">
+                Tracks the pointer through a spring, with fade + scale in on hover.
+              </p>
+              <div className="mt-4 flex justify-center overflow-hidden rounded-2xl border border-white/10 bg-black">
+                <SpringMouseFollow />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-mono text-sm text-white">VelocityStretchMouseFollow</h3>
+              <p className="mt-1 text-sm text-zinc-400">
+                Stretches and squashes along its direction of travel based on
+                real pointer velocity — a liquid blob feel.
+              </p>
+              <div className="mt-4 flex justify-center overflow-hidden rounded-2xl border border-white/10 bg-black">
+                <VelocityStretchMouseFollow />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-mono text-sm text-white">LinkHoverImageCursor</h3>
+              <p className="mt-1 text-sm text-zinc-400">
+                Leaves the native cursor alone everywhere — except while
+                hovering a link or button, where it hides the cursor and your
+                image (or GIF) follows the pointer instead.
+              </p>
+              <div className="mt-4 flex justify-center overflow-hidden rounded-2xl border border-white/10 bg-black">
+                <LinkHoverImageCursor src="/cursors/lip-bite.png" />
+              </div>
+            </div>
           </div>
 
-          <p className="mt-8 text-xs text-zinc-600">
+          <p className="mt-10 text-xs text-zinc-600">
             SimpleMouseFollow and SpringMouseFollow adapted from{" "}
             <a href="https://skiper-ui.com" target="_blank" rel="noreferrer" className="underline">
               Skiper UI
@@ -82,7 +94,7 @@ export default function MouseFollowDocsPage() {
               Gurvinder Singh
             </a>
             , used under its free-tier license. VelocityStretchMouseFollow and
-            MagneticMouseFollow are original.
+            LinkHoverImageCursor are original.
           </p>
         </section>
       </main>
