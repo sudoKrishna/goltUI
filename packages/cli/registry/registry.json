@@ -96,5 +96,16 @@
       "name": "TextScrollAnimation",
       "path": "@/components/gotlui/text-scroll/TextScrollAnimation"
     }
+  },
+  "voice-beam": {
+    "description": "Wraps a child element and overlays a sound-reactive glow along its bottom edge: a centered, colorful beam that rises and blooms with the voice. Auto-detects the child's border radius, ships zero runtime dependencies and needs React 18 or newer.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "voice-beam.tsx", "target": "components/gotlui/voice-beam.tsx" }
+    ],
+    "import": {
+      "name": "VoiceBeam",
+      "path": "@/components/gotlui/voice-beam"
+    }
   }
 }
