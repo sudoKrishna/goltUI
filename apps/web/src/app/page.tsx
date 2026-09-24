@@ -24,7 +24,6 @@ export default function Home() {
         <FAQ />
         <CTA />
          <div style={{ padding: "4rem", fontFamily: "sans-serif" }}>
-        <Background />
    </div>
       
       </main>
