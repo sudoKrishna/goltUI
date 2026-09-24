@@ -73,10 +73,13 @@
     ]
   },
   "mouse-follow": {
-    "description": "Four cursor-following effects: direct, spring, velocity-stretch blob, and magnetic pull. Simple/Spring adapted from Skiper UI, credit required.",
+    "description": "Four cursor-following effects: direct, spring, velocity-stretch blob, and link-hover image swap. Simple/Spring adapted from Skiper UI, credit required.",
     "dependencies": ["framer-motion"],
     "files": [
       { "source": "mouse-follow.tsx", "target": "components/gotlui/mouse-follow.tsx" }
+    ],
+    "assets": [
+      { "source": "assets/cursors", "target": "public/cursors" }
     ],
     "import": {
       "name": "MouseFollowShowcase",
@@ -95,6 +98,90 @@
     "import": {
       "name": "TextScrollAnimation",
       "path": "@/components/gotlui/text-scroll/TextScrollAnimation"
+    }
+  },
+  "signup-one": {
+    "description": "Signup form, split-screen layout with an image side.",
+    "dependencies": ["@icons-pack/react-simple-icons"],
+    "files": [
+      { "source": "signup-one/SignupOne.tsx", "target": "components/gotlui/signup-one/SignupOne.tsx" },
+      { "source": "signup-one/AuthField.tsx", "target": "components/gotlui/signup-one/AuthField.tsx" }
+    ],
+    "import": {
+      "name": "SignupOne",
+      "path": "@/components/gotlui/signup-one/SignupOne"
+    }
+  },
+  "signup-two": {
+    "description": "Signup form, centered card layout.",
+    "dependencies": [],
+    "files": [
+      { "source": "signup-two/SignupTwo.tsx", "target": "components/gotlui/signup-two/SignupTwo.tsx" },
+      { "source": "signup-two/AuthField.tsx", "target": "components/gotlui/signup-two/AuthField.tsx" }
+    ],
+    "import": {
+      "name": "SignupTwo",
+      "path": "@/components/gotlui/signup-two/SignupTwo"
+    }
+  },
+  "signup-three": {
+    "description": "Signup form, minimal centered layout with Apple/Google sign-in.",
+    "dependencies": ["@icons-pack/react-simple-icons"],
+    "files": [
+      { "source": "signup-three/SignupThree.tsx", "target": "components/gotlui/signup-three/SignupThree.tsx" },
+      { "source": "signup-three/AuthField.tsx", "target": "components/gotlui/signup-three/AuthField.tsx" }
+    ],
+    "import": {
+      "name": "SignupThree",
+      "path": "@/components/gotlui/signup-three/SignupThree"
+    }
+  },
+  "plane-window-hero": {
+    "description": "Full-viewport airplane-window intro hero with liquid-glass window optics and drifting clouds. Adapted from Aceternity UI; the real WebGL cloud shader is substituted with a canvas drift.",
+    "dependencies": ["framer-motion"],
+    "files": [
+      { "source": "plane-window-hero/PlaneWindowHero.tsx", "target": "components/gotlui/plane-window/PlaneWindowHero.tsx" },
+      { "source": "plane-window-hero/CloudShader.tsx", "target": "components/gotlui/plane-window/CloudShader.tsx" }
+    ],
+    "import": {
+      "name": "PlaneWindowHero",
+      "path": "@/components/gotlui/plane-window/PlaneWindowHero"
+    }
+  },
+  "voice-glow": {
+    "description": "Sound-reactive glow — a centered, colorful beam along the bottom edge of any element that rises and blooms with voice intensity. From Libraries.dev (MIT).",
+    "dependencies": [],
+    "files": [
+      { "source": "voice-glow/index.ts", "target": "components/gotlui/voice-glow/index.ts" },
+      { "source": "voice-glow/VoiceBeam.tsx", "target": "components/gotlui/voice-glow/VoiceBeam.tsx" },
+      { "source": "voice-glow/voiceDriver.ts", "target": "components/gotlui/voice-glow/voiceDriver.ts" },
+      { "source": "voice-glow/styles.ts", "target": "components/gotlui/voice-glow/styles.ts" },
+      { "source": "voice-glow/presets.ts", "target": "components/gotlui/voice-glow/presets.ts" },
+      { "source": "voice-glow/types.ts", "target": "components/gotlui/voice-glow/types.ts" },
+      { "source": "voice-glow/useMicrophone.ts", "target": "components/gotlui/voice-glow/useMicrophone.ts" },
+      { "source": "voice-glow/audio.ts", "target": "components/gotlui/voice-glow/audio.ts" },
+      { "source": "voice-glow/color.ts", "target": "components/gotlui/voice-glow/color.ts" },
+      { "source": "voice-glow/VoiceGlowDemo.tsx", "target": "components/gotlui/voice-glow/VoiceGlowDemo.tsx" }
+    ],
+    "import": {
+      "name": "{ VoiceBeam, useMicrophone }",
+      "path": "@/components/gotlui/voice-glow"
+    }
+  },
+  "border-beam": {
+    "description": "Animated border effect — a traveling or breathing colorful beam around an element's edge. From Libraries.dev (MIT).",
+    "dependencies": [],
+    "files": [
+      { "source": "border-beam/index.ts", "target": "components/gotlui/border-beam/index.ts" },
+      { "source": "border-beam/BorderBeam.tsx", "target": "components/gotlui/border-beam/BorderBeam.tsx" },
+      { "source": "border-beam/pulseDriver.ts", "target": "components/gotlui/border-beam/pulseDriver.ts" },
+      { "source": "border-beam/styles.ts", "target": "components/gotlui/border-beam/styles.ts" },
+      { "source": "border-beam/types.ts", "target": "components/gotlui/border-beam/types.ts" },
+      { "source": "border-beam/BorderBeamDemo.tsx", "target": "components/gotlui/border-beam/BorderBeamDemo.tsx" }
+    ],
+    "import": {
+      "name": "{ BorderBeam }",
+      "path": "@/components/gotlui/border-beam"
     }
   }
 }

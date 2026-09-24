@@ -4,7 +4,7 @@
  * "Simple" and "Spring" variants adapted from "Skiper 61" by Skiper UI
  * (https://skiper-ui.com), created by Gurvinder Singh (@gurvinder-singh02,
  * https://gxuri.me). Used under Skiper UI's free-tier license, which
- * requires this attribution. "Velocity Stretch" and "Magnetic Pull" are
+ * requires this attribution. "Velocity Stretch" and "Link Hover Image" are
  * original additions.
  */
 
@@ -121,40 +121,71 @@ export function VelocityStretchMouseFollow() {
   );
 }
 
-// Original: a centered dot gets magnetically pulled toward the cursor the
-// closer it gets, snapping back to center once the cursor leaves — the
-// classic "magnetic button" effect.
-export function MagneticMouseFollow() {
+interface LinkHoverImageCursorProps {
+  /** Image or GIF URL that follows the cursor while hovering a link/button. */
+  src: string;
+  /** Size in pixels of the following image. Defaults to 120. */
+  size?: number;
+}
+
+// Original: the native cursor is left alone everywhere — except while
+// hovering an <a> or <button>, where it's hidden and your image/GIF
+// follows the pointer instead. Good for a fun hover-reveal on links.
+export function LinkHoverImageCursor({ src, size = 120 }: LinkHoverImageCursorProps) {
   const x = useSpring(0, SPRING);
   const y = useSpring(0, SPRING);
-  const scale = useSpring(1, SPRING);
+  const opacity = useSpring(0, SPRING);
+  const scale = useSpring(0.6, SPRING);
 
   function handlePointerMove(e: React.PointerEvent<HTMLDivElement>) {
     const bounds = e.currentTarget.getBoundingClientRect();
-    const relX = e.clientX - bounds.left - bounds.width / 2;
-    const relY = e.clientY - bounds.top - bounds.height / 2;
-    const distance = Math.sqrt(relX * relX + relY * relY);
-    const radius = 160;
-    const pull = Math.max(0, 1 - distance / radius);
-
-    x.set(relX * pull * 0.6);
-    y.set(relY * pull * 0.6);
-    scale.set(1 + pull * 0.5);
+    x.set(e.clientX - bounds.left - size / 2);
+    y.set(e.clientY - bounds.top - size / 2);
   }
 
-  function handlePointerLeave() {
-    x.set(0);
-    y.set(0);
-    scale.set(1);
+  function handleOver(e: React.PointerEvent<HTMLDivElement>) {
+    const target = (e.target as HTMLElement).closest("a, button");
+    if (target) {
+      opacity.set(1);
+      scale.set(1);
+    }
+  }
+
+  function handleOut(e: React.PointerEvent<HTMLDivElement>) {
+    const related = e.relatedTarget as HTMLElement | null;
+    const stillOnInteractive = related?.closest?.("a, button");
+    if (!stillOnInteractive) {
+      opacity.set(0);
+      scale.set(0.6);
+    }
   }
 
   return (
     <div
       onPointerMove={handlePointerMove}
-      onPointerLeave={handlePointerLeave}
-      className="mt-20 flex size-[500px] items-center justify-center overflow-hidden rounded-[2rem] bg-zinc-900"
+      onPointerOver={handleOver}
+      onPointerOut={handleOut}
+      className="relative mt-20 flex size-[500px] items-center justify-center overflow-hidden rounded-[2rem] bg-zinc-900"
     >
-      <motion.div style={{ x, y, scale }} className="size-16 rounded-full bg-white" />
+      <div className="flex items-center gap-4">
+        <a
+          href="#"
+          onClick={(e) => e.preventDefault()}
+          className="rounded-lg border border-white/15 px-5 py-2.5 text-sm text-white hover:cursor-none"
+        >
+          Hover this link
+        </a>
+        <button className="rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-black hover:cursor-none">
+          Or this button
+        </button>
+      </div>
+
+      <motion.img
+        src={src}
+        alt=""
+        style={{ x, y, opacity, scale, width: size, height: size }}
+        className="pointer-events-none absolute left-0 top-0 rounded-full object-cover"
+      />
     </div>
   );
 }
@@ -175,8 +206,8 @@ export default function MouseFollowShowcase() {
         <VelocityStretchMouseFollow />
       </div>
       <div className="flex h-screen w-full snap-start flex-col items-center justify-center px-5">
-        <SectionLabel text="Magnetic pull" />
-        <MagneticMouseFollow />
+        <SectionLabel text="Link hover image" />
+        <LinkHoverImageCursor src="/cursors/lip-bite.png" />
       </div>
     </section>
   );
