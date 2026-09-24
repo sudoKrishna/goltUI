@@ -4,6 +4,7 @@ import Footer from "@/components/Footer"
 import InputMic from "@/components/InputMic"
 import Button from "@/components/Buttons"
 import TextReveal from "@/components/TextReveal"
+import { BorderBeam } from "@/components/border-beam"
 
 const components = [
   {
@@ -61,6 +62,31 @@ const components = [
         <span className="h-8 w-8 rounded-full bg-white" />
         <span className="mt-2">hover to try it on its page</span>
       </div>
+    ),
+  },
+  {
+    slug: "voice-glow",
+    name: "Voice Glow",
+    description: "Sound-reactive glow — a colorful beam that rises and blooms with real mic input.",
+    available: true,
+    preview: (
+      <div className="flex flex-col items-center justify-center gap-1 text-xs text-zinc-500">
+        <span className="h-2 w-24 rounded-full bg-gradient-to-r from-pink-500 via-emerald-400 to-sky-400 blur-[2px]" />
+        <span className="mt-2">click the mic on its page</span>
+      </div>
+    ),
+  },
+  {
+    slug: "border-beam",
+    name: "Border Beam",
+    description: "Animated border effect — a traveling or breathing colorful beam around an element's edge.",
+    available: true,
+    preview: (
+      <BorderBeam size="sm" colorVariant="colorful" theme="dark">
+        <div className="flex h-10 w-24 items-center justify-center rounded-lg bg-zinc-900 text-xs text-zinc-400">
+          border
+        </div>
+      </BorderBeam>
     ),
   },
   {
