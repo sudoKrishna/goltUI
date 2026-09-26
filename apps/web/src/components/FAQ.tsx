@@ -3,26 +3,77 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const faqs = [
+const faqSections = [
   {
-    q: "What exactly do I get?",
-    a: "Lifetime access to every block, component, and template in the library, plus all future additions.",
+    category: "General",
+    faqs: [
+      {
+        q: "What exactly do I get with gotlUI Pro?",
+        a: "Lifetime access to every block, animated component, and full-page template in the library, plus everything added afterward.",
+      },
+      {
+        q: "Who should use gotlUI Pro?",
+        a: "Developers and small teams who want production-ready UI without spending weeks designing and animating it from scratch.",
+      },
+      {
+        q: "How is gotlUI Pro different from free UI libraries?",
+        a: "The free registry covers core components; Pro adds full templates, richer motion, and priority updates on top of it.",
+      },
+      {
+        q: "How much development time can this save?",
+        a: "Most teams cut initial UI build time down from weeks to a few days by copying finished, animated blocks instead of building from zero.",
+      },
+      {
+        q: "Do I get future updates?",
+        a: "Yes — every new block, component, and template we ship is included automatically at no extra cost.",
+      },
+      {
+        q: "Will new components be added over time?",
+        a: "Regularly. The registry keeps growing, and Pro members get new additions as soon as they're published.",
+      },
+    ],
   },
   {
-    q: "Can I use it in commercial projects?",
-    a: "Yes. The license covers unlimited personal and commercial projects, including client work.",
+    category: "Licensing",
+    faqs: [
+      {
+        q: "Can I use gotlUI Pro in commercial projects?",
+        a: "Yes. Your one-time payment covers unlimited personal and commercial projects.",
+      },
+      {
+        q: "Can agencies and freelancers use it for client work?",
+        a: "Yes, you can use every block and template across as many client projects as you like.",
+      },
+      {
+        q: "Can I resell or redistribute the components?",
+        a: "No — the license covers building products with the components, not repackaging or reselling the source files themselves.",
+      },
+      {
+        q: "Is there a refund policy?",
+        a: "Yes, reach out within 14 days of purchase if it isn't the right fit and we'll refund you, no questions asked.",
+      },
+    ],
   },
   {
-    q: "Do I need a subscription?",
-    a: "No. It's a one-time payment — no recurring fees, ever.",
-  },
-  {
-    q: "Is it built with TypeScript?",
-    a: "Yes, every component ships with full TypeScript types out of the box.",
-  },
-  {
-    q: "Can I customize the components?",
-    a: "Since everything is copy-pasted directly into your codebase, you have full control to edit anything.",
+    category: "Technical",
+    faqs: [
+      {
+        q: "Is gotlUI Pro TypeScript friendly?",
+        a: "Every component ships with full TypeScript types out of the box.",
+      },
+      {
+        q: "Will animations hurt performance?",
+        a: "No — animations are CSS/canvas driven and built with performance budgets in mind, so they stay smooth even on lower-end devices.",
+      },
+      {
+        q: "Does it work with Next.js and Vite?",
+        a: "Yes, every component is plain React and Tailwind, so it drops into a Next.js or Vite project without changes.",
+      },
+      {
+        q: "Do components work with shadcn/ui?",
+        a: "Yes — components follow the same registry conventions as shadcn/ui, so they install and compose the same way.",
+      },
+    ],
   },
 ];
 
@@ -64,20 +115,30 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="mx-auto max-w-3xl px-6 py-24">
-      <div className="mb-10 text-center">
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-          Frequently Asked Questions
-        </h2>
-        <p className="mt-3 text-zinc-400">
-          Everything you need to know about gotlUI.
-        </p>
-      </div>
+    <section id="faq" className="mx-auto max-w-5xl px-6 py-24">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,280px)_1fr]">
+        <div>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-3 text-zinc-400">
+            Common questions about gotlUI Pro, from licensing and updates to
+            how it fits your workflow.
+          </p>
+        </div>
 
-      <div>
-        {faqs.map((f) => (
-          <FAQItem key={f.q} q={f.q} a={f.a} />
-        ))}
+        <div>
+          {faqSections.map((section) => (
+            <div key={section.category} className="mb-2">
+              <div className="mb-1 mt-4 text-xs font-medium uppercase tracking-wide text-zinc-500 first:mt-0">
+                {section.category}
+              </div>
+              {section.faqs.map((f) => (
+                <FAQItem key={f.q} q={f.q} a={f.a} />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

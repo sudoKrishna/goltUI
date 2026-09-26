@@ -2,85 +2,134 @@
 
 import { motion } from "framer-motion";
 
-const checklist = [
-  { label: "Installing dependencies", delay: 0 },
-  { label: "Configuring Tailwind", delay: 0.9 },
-  { label: "Ready to build", delay: 1.8 },
+const rows = [
+  { label: "Creating Your Account", duration: 2.4, delay: 0 },
+  { label: "Setting Up Your Profile", duration: 2.8, delay: 0.3 },
 ];
+
+function Spinner() {
+  return (
+    <motion.span
+      animate={{ rotate: 360 }}
+      transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }}
+      className="h-3 w-3 flex-shrink-0 rounded-full border-2 border-zinc-600 border-t-white"
+    />
+  );
+}
 
 function SetupCard() {
   return (
     <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-8">
       <div className="flex min-h-[220px] flex-col justify-center gap-3">
-        {checklist.map((item, i) => (
-          <motion.div
-            key={item.label}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: item.delay, duration: 0.5 }}
-            className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3"
+        {rows.map((row) => (
+          <div
+            key={row.label}
+            className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3"
           >
-            <motion.span
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: item.delay + 0.2, type: "spring", stiffness: 300 }}
-              className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-[10px] font-bold text-black"
-            >
-              ✓
-            </motion.span>
-            <span className="text-sm text-zinc-200">{item.label}</span>
-          </motion.div>
+            <div className="flex items-center gap-2.5">
+              <Spinner />
+              <span className="text-sm text-zinc-200">{row.label}</span>
+            </div>
+            <div className="mt-2.5 h-1 w-full overflow-hidden rounded-full bg-white/10">
+              <motion.div
+                className="h-full rounded-full bg-white"
+                initial={{ width: "0%" }}
+                animate={{ width: ["0%", "100%"] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: row.duration,
+                  delay: row.delay,
+                  ease: "easeInOut",
+                }}
+              />
+            </div>
+          </div>
         ))}
       </div>
       <div>
-        <h3 className="text-lg font-medium text-white">Zero-config setup</h3>
+        <h3 className="text-lg font-medium text-white">Swift onboarding</h3>
         <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-          Drop a block into your project and it works — no extra config,
-          no dependency hunting.
+          Quickly set up your account, personalize your space, and begin
+          exploring all features with ease.
         </p>
       </div>
     </div>
   );
 }
 
-const nodes = ["Button", "Card", "Modal", "Toast", "Input"];
+const files = 5;
 
-function SyncCard() {
+function ExportReactorCard() {
   return (
     <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-8">
-      <div className="relative flex min-h-[220px] flex-col items-center justify-center">
+      <div className="relative flex min-h-[220px] flex-col items-center justify-between py-2">
+        <div className="relative h-10 w-px bg-gradient-to-b from-transparent to-white/20">
+          <motion.span
+            className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-emerald-400"
+            animate={{ top: ["0%", "100%"], opacity: [0, 1, 0] }}
+            transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+          />
+        </div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          animate={{
+            boxShadow: [
+              "0 0 0px rgba(52,211,153,0)",
+              "0 0 18px rgba(52,211,153,0.35)",
+              "0 0 0px rgba(52,211,153,0)",
+            ],
+          }}
+          transition={{
+            boxShadow: { repeat: Infinity, duration: 2.2, ease: "easeInOut" },
+          }}
           className="z-10 rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300"
         >
-          Live Preview
+          Export as CSV
         </motion.div>
 
-        <div className="mt-6 flex gap-3">
-          {nodes.map((node, i) => (
+        <svg
+          viewBox="0 0 240 50"
+          className="mt-2 h-10 w-full max-w-[240px] text-white/15"
+          aria-hidden
+        >
+          <line x1="120" y1="0" x2="120" y2="14" stroke="currentColor" strokeWidth="1" />
+          <line x1="24" y1="14" x2="216" y2="14" stroke="currentColor" strokeWidth="1" />
+          {[24, 72, 120, 168, 216].map((x) => (
+            <line key={x} x1={x} y1="14" x2={x} y2="44" stroke="currentColor" strokeWidth="1" />
+          ))}
+        </svg>
+
+        <div className="flex w-full max-w-[240px] justify-between">
+          {Array.from({ length: files }).map((_, i) => (
             <motion.div
-              key={node}
-              initial={{ opacity: 0, y: -10 }}
+              key={i}
+              initial={{ opacity: 0, y: -6 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 + i * 0.15, duration: 0.4 }}
-              className="flex h-14 w-14 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-[10px] text-zinc-400"
+              transition={{ delay: 0.15 * i, duration: 0.4 }}
+              className="flex h-9 w-7 items-center justify-center rounded-[3px] border border-white/15 bg-white/[0.05]"
             >
-              {node}
+              <svg viewBox="0 0 16 20" width="10" height="12" aria-hidden>
+                <path
+                  d="M2 1h8l4 4v14H2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  className="text-zinc-500"
+                />
+              </svg>
             </motion.div>
           ))}
         </div>
       </div>
       <div>
-        <h3 className="text-lg font-medium text-white">Live component preview</h3>
+        <h3 className="text-lg font-medium text-white">Export Reactor</h3>
         <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-          See every block rendered exactly as it will look before you copy
-          a single line of code.
+          Multiple files send animated streams into a central node that
+          refines and emits structured, downloadable output.
         </p>
       </div>
     </div>
@@ -92,7 +141,7 @@ export default function BentoFeatures() {
     <section className="mx-auto max-w-6xl px-6 py-24">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <SetupCard />
-        <SyncCard />
+        <ExportReactorCard />
       </div>
     </section>
   );
