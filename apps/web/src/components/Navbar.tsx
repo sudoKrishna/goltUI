@@ -19,7 +19,7 @@ export default function Navbar() {
           <a href="#templates" className="transition-colors hover:text-white">
             Templates
           </a>
-          <a href="#docs" className="transition-colors hover:text-white">
+          <a href="/docs" className="transition-colors hover:text-white">
             Docs
           </a>
         </div>

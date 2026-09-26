@@ -7,7 +7,9 @@ export default function Hero() {
       />
 
       <a
-        href="#changelog"
+        href="https://github.com/sudoKrishna/goltUI"
+        target="_blank"
+        rel="noreferrer"
         className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-zinc-300"
       >
         <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -30,14 +32,14 @@ export default function Hero() {
 
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">
         <a
-          href="#blocks"
-          className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90"
+          href="/blocks"
+          className="rounded-md border border-zinc-700 bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90"
         >
           Browse Blocks
         </a>
         <a
-          href="#docs"
-          className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-white/30"
+          href="/docs"
+          className="rounded-md border border-zinc-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-zinc-500"
         >
           Read the Docs
         </a>

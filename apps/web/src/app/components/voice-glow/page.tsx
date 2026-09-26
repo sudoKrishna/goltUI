@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
 import CodeBlock from "@/components/CodeBlock"
 import VoiceGlowDemo from "@/components/voice-glow/VoiceGlowDemo"
 
@@ -41,60 +39,54 @@ const props = [
 
 export default function VoiceGlowDocsPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-black">
-      <Navbar />
-      <main className="flex-1">
-        <section className="mx-auto max-w-3xl px-6 py-20">
-          <h1 className="text-3xl font-semibold text-white sm:text-4xl">Voice Glow</h1>
-          <p className="mt-3 text-zinc-400">
-            A sound-reactive glow — a centered, colorful beam along the bottom
-            edge of any element that rises and blooms with real microphone
-            input. Click the mic below and speak.
-          </p>
+    <section className="max-w-3xl py-20">
+      <h1 className="text-3xl font-semibold text-white sm:text-4xl">Voice Glow</h1>
+      <p className="mt-3 text-zinc-400">
+        A sound-reactive glow — a centered, colorful beam along the bottom
+        edge of any element that rises and blooms with real microphone
+        input. Click the mic below and speak.
+      </p>
 
-          <div className="mt-10 flex min-h-[200px] items-center justify-center rounded-2xl border border-white/10 bg-zinc-950">
-            <VoiceGlowDemo />
-          </div>
+      <div className="mt-10 flex min-h-[200px] items-center justify-center rounded-2xl border border-white/10 bg-zinc-950">
+        <VoiceGlowDemo />
+      </div>
 
-          <h2 className="mt-10 mb-3 text-lg font-medium text-white">Installation</h2>
-          <CodeBlock code="npx gotlui add voice-glow" />
+      <h2 className="mt-10 mb-3 text-lg font-medium text-white">Installation</h2>
+      <CodeBlock code="npx gotlui add voice-glow" />
 
-          <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
-          <CodeBlock label="page.tsx" code={usageCode} />
+      <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
+      <CodeBlock label="page.tsx" code={usageCode} />
 
-          <h2 className="mt-10 mb-4 text-lg font-medium text-white">Key props</h2>
-          <div className="overflow-x-auto rounded-xl border border-white/10">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b border-white/10 bg-white/[0.03] text-zinc-400">
-                  <th className="px-4 py-3 font-medium">Prop</th>
-                  <th className="px-4 py-3 font-medium">Type</th>
-                  <th className="px-4 py-3 font-medium">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                {props.map((p, i) => (
-                  <tr key={p.name} className={i !== props.length - 1 ? "border-b border-white/5" : ""}>
-                    <td className="px-4 py-3 font-mono text-xs text-white">{p.name}</td>
-                    <td className="px-4 py-3 font-mono text-xs text-zinc-400">{p.type}</td>
-                    <td className="px-4 py-3 text-zinc-400">{p.desc}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      <h2 className="mt-10 mb-4 text-lg font-medium text-white">Key props</h2>
+      <div className="overflow-x-auto rounded-xl border border-white/10">
+        <table className="w-full text-left text-sm">
+          <thead>
+            <tr className="border-b border-white/10 bg-white/[0.03] text-zinc-400">
+              <th className="px-4 py-3 font-medium">Prop</th>
+              <th className="px-4 py-3 font-medium">Type</th>
+              <th className="px-4 py-3 font-medium">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {props.map((p, i) => (
+              <tr key={p.name} className={i !== props.length - 1 ? "border-b border-white/5" : ""}>
+                <td className="px-4 py-3 font-mono text-xs text-white">{p.name}</td>
+                <td className="px-4 py-3 font-mono text-xs text-zinc-400">{p.type}</td>
+                <td className="px-4 py-3 text-zinc-400">{p.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-          <p className="mt-8 text-xs text-zinc-600">
-            Originally from{" "}
-            <a href="https://libraries.dev/voice" target="_blank" rel="noreferrer" className="underline">
-              Libraries.dev
-            </a>{" "}
-            by Jakub Antalik, MIT licensed. It has 50+ props for fine-tuning
-            geometry, color, and motion — see the source for the full list.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
+      <p className="mt-8 text-xs text-zinc-600">
+        Originally from{" "}
+        <a href="https://libraries.dev/voice" target="_blank" rel="noreferrer" className="underline">
+          Libraries.dev
+        </a>{" "}
+        by Jakub Antalik, MIT licensed. It has 50+ props for fine-tuning
+        geometry, color, and motion — see the source for the full list.
+      </p>
+    </section>
   )
 }
