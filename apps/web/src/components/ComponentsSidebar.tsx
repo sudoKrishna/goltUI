@@ -18,6 +18,7 @@ const groups = [
       { slug: "mouse-follow", name: "Mouse Follow" },
       { slug: "voice-glow", name: "Voice Glow" },
       { slug: "border-beam", name: "Border Beam" },
+      { slug: "thinking-orbs", name: "Thinking Orbs" },
       { slug: "card", name: "Card", disabled: true },
     ],
   },

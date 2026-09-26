@@ -3,6 +3,7 @@ import InputMic from "@/components/InputMic"
 import Button from "@/components/Buttons"
 import TextReveal from "@/components/TextReveal"
 import { BorderBeam } from "@/components/border-beam"
+import { ThinkingOrb } from "@/components/thinking-orbs"
 
 const components = [
   {
@@ -85,6 +86,18 @@ const components = [
           border
         </div>
       </BorderBeam>
+    ),
+  },
+  {
+    slug: "thinking-orbs",
+    name: "Thinking Orbs",
+    description: "Nine hand-tuned dotted thought-orb loading states for AI & agent UIs, on a plain 2D canvas.",
+    available: true,
+    preview: (
+      <div className="flex items-center gap-6">
+        <ThinkingOrb state="searching" size={64} theme="dark" />
+        <ThinkingOrb state="weaving" size={64} theme="dark" />
+      </div>
     ),
   },
   {
