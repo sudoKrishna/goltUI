@@ -56,6 +56,7 @@ const navLinks = [
   { label: "Blocks", href: "/blocks" },
   { label: "Templates", href: "#templates" },
   { label: "Components", href: "/components" },
+  { label: "Play", href: "/play" },
 ];
 
 export default function Navbar() {
