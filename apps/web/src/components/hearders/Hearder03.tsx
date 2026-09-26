@@ -36,11 +36,6 @@ const Icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
     </svg>
   ),
-  Pricing: (
-    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  ),
   Marketing: (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
@@ -79,41 +74,27 @@ const Icons = {
 };
 
 const menus = {
-  Components: {
-    left: [
-      { title: "UI Elements", desc: "Core UI like buttons, modals.", icon: Icons.UIElements, href: "#" },
-      { title: "Animations", desc: "Interactive motion-based UI parts.", icon: Icons.Animations, href: "#" },
-      { title: "Layouts", desc: "Adaptive layouts for web apps.", icon: Icons.Layouts, href: "#" },
-    ],
-    right: [
-      { title: "Bento Grids", desc: "Modern, animated grid sections.", icon: Icons.Bento, href: "#" },
-      { title: "Utilities", desc: "Icons, loaders, and small helpers.", icon: Icons.Utilities, href: "#" },
-    ],
-  },
-  Templates: {
-    left: [
-      { title: "Landing Pages", desc: "Prebuilt pages for launches.", icon: Icons.Landing, href: "#" },
-      { title: "Pricing Pages", desc: "Conversion-focused pricing layouts.", icon: Icons.Pricing, href: "#" },
-      { title: "Marketing Sections", desc: "Hero, features, and testimonials.", icon: Icons.Marketing, href: "#" },
-      { title: "Dashboards", desc: "Analytics and admin layouts.", icon: Icons.Dashboard, href: "#" },
-    ],
-    right: [
-      { title: "Auth Screens", desc: "Login and signup flows.", icon: Icons.Auth, href: "#" },
-      { title: "Portfolio", desc: "Minimal sites for creators.", icon: Icons.Portfolio, href: "#" },
-      { title: "Coming Soon", desc: "Simple launch placeholders.", icon: Icons.Animations, href: "#" },
-    ],
-  },
-  Resources: {
-    left: [
-      { title: "Docs", desc: "Guides and setup steps.", icon: Icons.Docs, href: "#" },
-      { title: "Integrations", desc: "Use with any tech stack.", icon: Icons.Layouts, href: "#" },
-      { title: "Design Tokens", desc: "Colors and spacing system.", icon: Icons.Utilities, href: "#" },
-    ],
-    right: [
-      { title: "Community", desc: "Connect with other devs.", icon: Icons.Community, href: "#" },
-      { title: "Support", desc: "Help and issue reports.", icon: Icons.Docs, href: "#" },
-    ],
-  },
+  Components: [
+    { title: "UI Elements", desc: "Core UI like buttons, modals.", icon: Icons.UIElements },
+    { title: "Animations", desc: "Interactive motion-based UI parts.", icon: Icons.Animations },
+    { title: "Layouts", desc: "Adaptive layouts for web apps.", icon: Icons.Layouts },
+    { title: "Bento Grids", desc: "Modern, animated grid sections.", icon: Icons.Bento },
+    { title: "Utilities", desc: "Icons, loaders, and small helpers.", icon: Icons.Utilities },
+  ],
+  Templates: [
+    { title: "Landing Pages", desc: "Prebuilt pages for launches.", icon: Icons.Landing },
+    { title: "Marketing Sections", desc: "Hero, features, and testimonials.", icon: Icons.Marketing },
+    { title: "Dashboards", desc: "Analytics and admin layouts.", icon: Icons.Dashboard },
+    { title: "Auth Screens", desc: "Login and signup flows.", icon: Icons.Auth },
+    { title: "Portfolio", desc: "Minimal sites for creators.", icon: Icons.Portfolio },
+    { title: "Coming Soon", desc: "Simple launch placeholders.", icon: Icons.Animations },
+  ],
+  Resources: [
+    { title: "Docs", desc: "Guides and setup steps.", icon: Icons.Docs },
+    { title: "Integrations", desc: "Use with any tech stack.", icon: Icons.Layouts },
+    { title: "Design Tokens", desc: "Colors and spacing system.", icon: Icons.Utilities },
+    { title: "Community", desc: "Connect with other devs.", icon: Icons.Community },
+  ],
 };
 
 const dropdownVariants = {
@@ -132,7 +113,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.18 } },
 };
 
-export default function Header01() {
+export default function Header03() {
   const [open, setOpen] = useState<string | null>(null);
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -195,47 +176,48 @@ export default function Header01() {
                           initial="hidden"
                           animate="visible"
                           exit="exit"
-                          className="absolute left-1/2 top-full z-50 mt-2 w-[520px] -translate-x-1/2 overflow-hidden rounded-xl border border-white/10 bg-zinc-950 shadow-2xl"
+                          className="absolute left-0 top-full z-50 mt-2 w-[280px] overflow-hidden rounded-xl border border-white/10 bg-zinc-950 shadow-2xl"
                         >
-                          <div className="flex gap-1 p-2">
-                            <div className="flex flex-1 flex-col">
-                              {menus[label as keyof typeof menus].left.map((item) => (
-                                <motion.div key={item.title} variants={itemVariants}>
-                                  <Link
-                                    href={item.href}
-                                    className="group flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5"
-                                    onClick={() => setOpen(null)}
-                                  >
-                                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/5 text-zinc-400 group-hover:text-white">
-                                      {item.icon}
-                                    </span>
-                                    <div>
-                                      <p className="text-sm font-medium text-zinc-200 group-hover:text-white">{item.title}</p>
-                                      <p className="text-xs text-zinc-500">{item.desc}</p>
-                                    </div>
-                                  </Link>
-                                </motion.div>
-                              ))}
-                            </div>
-                            <div className="flex flex-1 flex-col">
-                              {menus[label as keyof typeof menus].right.map((item) => (
-                                <motion.div key={item.title} variants={itemVariants}>
-                                  <Link
-                                    href={item.href}
-                                    className="group flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5"
-                                    onClick={() => setOpen(null)}
-                                  >
-                                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/5 text-zinc-400 group-hover:text-white">
-                                      {item.icon}
-                                    </span>
-                                    <div>
-                                      <p className="text-sm font-medium text-zinc-200 group-hover:text-white">{item.title}</p>
-                                      <p className="text-xs text-zinc-500">{item.desc}</p>
-                                    </div>
-                                  </Link>
-                                </motion.div>
-                              ))}
-                            </div>
+                          <div className="flex flex-col p-2">
+                            {menus[label as keyof typeof menus].map((item) => (
+                              <motion.div key={item.title} variants={itemVariants}>
+                                <Link
+                                  href="#"
+                                  className="group flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5"
+                                  onClick={() => setOpen(null)}
+                                >
+                                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/5 text-zinc-400 group-hover:text-white">
+                                    {item.icon}
+                                  </span>
+                                  <div>
+                                    <p className="text-sm font-medium text-zinc-200 group-hover:text-white">{item.title}</p>
+                                    <p className="text-xs text-zinc-500">{item.desc}</p>
+                                  </div>
+                                </Link>
+                              </motion.div>
+                            ))}
+                            {label === "Components" && (
+                              <motion.div variants={itemVariants} className="mt-1 border-t border-white/10 pt-2">
+                                <Link
+                                  href="#"
+                                  className="block rounded-lg px-3 py-2 text-sm text-zinc-400 hover:bg-white/5 hover:text-white"
+                                  onClick={() => setOpen(null)}
+                                >
+                                  Explore all components →
+                                </Link>
+                              </motion.div>
+                            )}
+                            {label === "Resources" && (
+                              <motion.div variants={itemVariants} className="mt-1 border-t border-white/10 p-3">
+                                <p className="mb-2 text-xs font-medium text-zinc-400">Changelog</p>
+                                <p className="text-[11px] text-zinc-500">Recent changes across releases</p>
+                                <div className="mt-2 space-y-1.5">
+                                  <div className="h-1.5 w-full rounded bg-white/10" />
+                                  <div className="h-1.5 w-4/5 rounded bg-white/10" />
+                                  <div className="h-1.5 w-3/5 rounded bg-white/10" />
+                                </div>
+                              </motion.div>
+                            )}
                           </div>
                         </motion.div>
                       )}
