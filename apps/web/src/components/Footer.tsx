@@ -1,15 +1,29 @@
 const columns = [
   {
     title: "Explore",
-    links: ["Blocks", "Components", "Templates"],
+    links: [
+      { label: "Blocks", href: "/blocks" },
+      { label: "Components", href: "/components" },
+      { label: "Templates", href: null },
+    ],
   },
   {
     title: "Resources",
-    links: ["Docs", "Changelog", "Support"],
+    links: [
+      { label: "Docs", href: "/docs" },
+      { label: "Changelog", href: null },
+      {
+        label: "Support",
+        href: "https://github.com/sudoKrishna/goltUI/issues",
+      },
+    ],
   },
   {
     title: "Legal",
-    links: ["Terms of Service", "Privacy Policy"],
+    links: [
+      { label: "Terms of Service", href: null },
+      { label: "Privacy Policy", href: null },
+    ],
   },
 ];
 
@@ -34,13 +48,19 @@ export default function Footer() {
             <h4 className="mb-3 text-sm font-medium text-white">{col.title}</h4>
             <ul className="space-y-2">
               {col.links.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="text-sm text-zinc-500 transition-colors hover:text-zinc-300"
-                  >
-                    {link}
-                  </a>
+                <li key={link.label}>
+                  {link.href ? (
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                      className="text-sm text-zinc-500 transition-colors hover:text-zinc-300"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <span className="text-sm text-zinc-700">{link.label}</span>
+                  )}
                 </li>
               ))}
             </ul>
