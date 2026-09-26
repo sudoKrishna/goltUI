@@ -4,7 +4,7 @@
   "description": "CLI to add gotlUI components to your project",
   "type": "module",
   "bin": {
-    "gotlui": "./bin/gotlui.js"
+    "gotlui": "bin/gotlui.js"
   },
   "files": [
     "bin",
