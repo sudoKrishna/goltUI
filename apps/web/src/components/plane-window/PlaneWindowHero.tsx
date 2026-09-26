@@ -156,7 +156,7 @@ export default function PlaneWindowHero() {
                     ))}
                   </div>
                   <p className="text-sm text-white/85">
-                    <span className="font-semibold text-white">Manu</span> and 5
+                    <span className="font-semibold text-white">ron</span> and 5
                     others saved 30% on their last trip
                   </p>
                 </div>
