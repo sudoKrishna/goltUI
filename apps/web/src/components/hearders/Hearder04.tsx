@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Link from "next/link";
 
 const Icons = {
@@ -52,7 +52,7 @@ const leftItems = [
   { title: "Utilities", desc: "Icons, loaders, and helpers.", icon: Icons.Utilities },
 ];
 
-const dropdownVariants = {
+const dropdownVariants: Variants = {
   hidden: { opacity: 0, y: -8, scale: 0.98 },
   visible: {
     opacity: 1,
@@ -63,7 +63,7 @@ const dropdownVariants = {
   exit: { opacity: 0, y: -6, scale: 0.98, transition: { duration: 0.12 } },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 6 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.18 } },
 };

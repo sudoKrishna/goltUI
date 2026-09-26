@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { topLogos, bottomLogos } from "./logos";
 
 const topGroupA = topLogos.slice(0, 4);
@@ -10,18 +10,18 @@ const bottomGroupA = bottomLogos.slice(0, 4);
 const bottomGroupB = bottomLogos.slice(4, 8);
 
 
-const enterFromAbove = {
+const enterFromAbove: Variants = {
   hidden: { y: -40, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeInOut" } },
 };
 
-const topCycle = {
+const topCycle: Variants = {
   hidden: { y: -40, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeInOut" } },
   exit: { y: 40, opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } },
 };
 
-const bottomCycle = {
+const bottomCycle: Variants = {
   hidden: { y: 40, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeInOut" } },
   exit: { y: -40, opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } },
