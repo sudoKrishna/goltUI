@@ -183,5 +183,35 @@
       "name": "{ BorderBeam }",
       "path": "@/components/gotlui/border-beam"
     }
+  },
+  "header-01": {
+    "description": "Site header, two-column mega menu dropdown.",
+    "dependencies": ["framer-motion"],
+    "files": [{ "source": "header-01.tsx", "target": "components/gotlui/header-01.tsx" }]
+  },
+  "header-02": {
+    "description": "Site header, grid dropdown with promo panels.",
+    "dependencies": ["framer-motion"],
+    "files": [{ "source": "header-02.tsx", "target": "components/gotlui/header-02.tsx" }]
+  },
+  "header-03": {
+    "description": "Site header, compact single-column dropdown.",
+    "dependencies": ["framer-motion"],
+    "files": [{ "source": "header-03.tsx", "target": "components/gotlui/header-03.tsx" }]
+  },
+  "header-04": {
+    "description": "Site header, sidebar-label dropdown.",
+    "dependencies": ["framer-motion"],
+    "files": [{ "source": "header-04.tsx", "target": "components/gotlui/header-04.tsx" }]
+  },
+  "header-05": {
+    "description": "Site header that hides on scroll down, shows on scroll up, with a preview panel in its dropdown.",
+    "dependencies": ["framer-motion"],
+    "files": [{ "source": "header-05.tsx", "target": "components/gotlui/header-05.tsx" }]
+  },
+  "header-06": {
+    "description": "Site header with simple links and a full-screen mobile menu.",
+    "dependencies": ["framer-motion"],
+    "files": [{ "source": "header-06.tsx", "target": "components/gotlui/header-06.tsx" }]
   }
 }

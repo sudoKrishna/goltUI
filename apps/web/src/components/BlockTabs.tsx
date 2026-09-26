@@ -18,7 +18,7 @@ const categories = [
   { slug: "auth", name: "Auth" },
 ]
 
-const availableSlugs = new Set(["hero-section", "logo-cloud", "auth"])
+const availableSlugs = new Set(["header", "hero-section", "logo-cloud", "auth"])
 
 export default function BlockTabs() {
   const pathname = usePathname()
