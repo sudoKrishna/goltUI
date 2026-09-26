@@ -184,6 +184,34 @@
       "path": "@/components/gotlui/border-beam"
     }
   },
+  "thinking-orbs": {
+    "description": "Dotted thought-orb loading indicators for AI & agent UIs — nine hand-tuned animated states (working, searching, solving, listening, connecting, weaving, composing, breathing, shaping) on a plain 2D canvas. From Libraries.dev (MIT).",
+    "dependencies": [],
+    "files": [
+      { "source": "thinking-orbs/index.ts", "target": "components/gotlui/thinking-orbs/index.ts" },
+      { "source": "thinking-orbs/ThinkingOrb.tsx", "target": "components/gotlui/thinking-orbs/ThinkingOrb.tsx" },
+      { "source": "thinking-orbs/ThinkingOrbsDemo.tsx", "target": "components/gotlui/thinking-orbs/ThinkingOrbsDemo.tsx" },
+      { "source": "thinking-orbs/presets.ts", "target": "components/gotlui/thinking-orbs/presets.ts" },
+      { "source": "thinking-orbs/theme.ts", "target": "components/gotlui/thinking-orbs/theme.ts" },
+      { "source": "thinking-orbs/gravity.ts", "target": "components/gotlui/thinking-orbs/gravity.ts" },
+      { "source": "thinking-orbs/types.ts", "target": "components/gotlui/thinking-orbs/types.ts" },
+      { "source": "thinking-orbs/engine/index.ts", "target": "components/gotlui/thinking-orbs/engine/index.ts" },
+      { "source": "thinking-orbs/engine/types.ts", "target": "components/gotlui/thinking-orbs/engine/types.ts" },
+      { "source": "thinking-orbs/engine/core.ts", "target": "components/gotlui/thinking-orbs/engine/core.ts" },
+      { "source": "thinking-orbs/engine/registry.ts", "target": "components/gotlui/thinking-orbs/engine/registry.ts" },
+      { "source": "thinking-orbs/engine/profiles.ts", "target": "components/gotlui/thinking-orbs/engine/profiles.ts" },
+      { "source": "thinking-orbs/engine/orbits.ts", "target": "components/gotlui/thinking-orbs/engine/orbits.ts" },
+      { "source": "thinking-orbs/engine/lattice.ts", "target": "components/gotlui/thinking-orbs/engine/lattice.ts" },
+      { "source": "thinking-orbs/engine/web.ts", "target": "components/gotlui/thinking-orbs/engine/web.ts" },
+      { "source": "thinking-orbs/engine/braid.ts", "target": "components/gotlui/thinking-orbs/engine/braid.ts" },
+      { "source": "thinking-orbs/engine/ribbon.ts", "target": "components/gotlui/thinking-orbs/engine/ribbon.ts" },
+      { "source": "thinking-orbs/engine/morph.ts", "target": "components/gotlui/thinking-orbs/engine/morph.ts" }
+    ],
+    "import": {
+      "name": "{ ThinkingOrb }",
+      "path": "@/components/gotlui/thinking-orbs"
+    }
+  },
   "header-01": {
     "description": "Site header, two-column mega menu dropdown.",
     "dependencies": ["framer-motion"],
