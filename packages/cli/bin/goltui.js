@@ -100,7 +100,7 @@ function add(name) {
       .map((part) => part[0].toUpperCase() + part.slice(1))
       .join("");
   const importPath =
-    entry.import?.path ?? `@/components/gotlui/${name}`;
+    entry.import?.path ?? `@/components/goltui/${name}`;
 
   console.log(`\nDone. Import it with:\n`);
   console.log(`  import ${componentName} from "${importPath}"\n`);
@@ -113,7 +113,7 @@ if (command === "add" && name) {
 } else {
   console.log(`
 Usage:
-  gotlui add <component>
+  goltui add <component>
 
 Available components:
   ${Object.keys(registry).join("\n  ")}
