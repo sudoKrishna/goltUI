@@ -3,243 +3,243 @@
     "description": "A chat-style text input with a mic button: animated waveform driven by real microphone input, and optional live speech-to-text.",
     "dependencies": ["framer-motion"],
     "files": [
-      { "source": "input-mic.tsx", "target": "components/gotlui/input-mic.tsx" }
+      { "source": "input-mic.tsx", "target": "components/goltui/input-mic.tsx" }
     ]
   },
   "button": {
     "description": "The base button, dark and light variants.",
     "dependencies": [],
     "files": [
-      { "source": "button.tsx", "target": "components/gotlui/button.tsx" }
+      { "source": "button.tsx", "target": "components/goltui/button.tsx" }
     ]
   },
   "button-sizes": {
     "description": "Button sizes: Extra Small, Small, Default, Large.",
     "dependencies": [],
     "files": [
-      { "source": "button-sizes.tsx", "target": "components/gotlui/button-sizes.tsx" }
+      { "source": "button-sizes.tsx", "target": "components/goltui/button-sizes.tsx" }
     ]
   },
   "button-destructive": {
     "description": "Destructive button variant.",
     "dependencies": [],
     "files": [
-      { "source": "button-destructive.tsx", "target": "components/gotlui/button-destructive.tsx" }
+      { "source": "button-destructive.tsx", "target": "components/goltui/button-destructive.tsx" }
     ]
   },
   "button-spinner": {
     "description": "Loading buttons with a spinner: Downloading and Uploading.",
     "dependencies": [],
     "files": [
-      { "source": "button-spinner.tsx", "target": "components/gotlui/button-spinner.tsx" }
+      { "source": "button-spinner.tsx", "target": "components/goltui/button-spinner.tsx" }
     ]
   },
   "text-reveal": {
     "description": "Sequentially fades in text word-by-word with an optional blur effect.",
     "dependencies": ["framer-motion"],
     "files": [
-      { "source": "text-reveal.tsx", "target": "components/gotlui/text-reveal.tsx" }
+      { "source": "text-reveal.tsx", "target": "components/goltui/text-reveal.tsx" }
     ]
   },
   "hero-section": {
     "description": "Hero block with a cursor-reactive grid background and a gradient headline.",
     "dependencies": ["framer-motion"],
     "files": [
-      { "source": "hero-section.tsx", "target": "components/gotlui/hero-section.tsx" }
+      { "source": "hero-section.tsx", "target": "components/goltui/hero-section.tsx" }
     ]
   },
   "hero-section-two": {
     "description": "Hero block with an animated glowing gradient blob background.",
     "dependencies": ["framer-motion"],
     "files": [
-      { "source": "hero-section-two.tsx", "target": "components/gotlui/hero-section-two.tsx" }
+      { "source": "hero-section-two.tsx", "target": "components/goltui/hero-section-two.tsx" }
     ]
   },
   "logo-cloud": {
     "description": "8-logo grid that drops in row by row, with a heading and subtext.",
     "dependencies": ["framer-motion", "@icons-pack/react-simple-icons"],
     "files": [
-      { "source": "logo-cloud.tsx", "target": "components/gotlui/logo-cloud.tsx" },
-      { "source": "logos.ts", "target": "components/gotlui/logos.ts" }
+      { "source": "logo-cloud.tsx", "target": "components/goltui/logo-cloud.tsx" },
+      { "source": "logos.ts", "target": "components/goltui/logos.ts" }
     ]
   },
   "logo-cloud-two": {
     "description": "Logo cloud with a heading, subtext, marquee, and a CTA button.",
     "dependencies": ["framer-motion", "@icons-pack/react-simple-icons"],
     "files": [
-      { "source": "logo-cloud-two.tsx", "target": "components/gotlui/logo-cloud-two.tsx" },
-      { "source": "LogoMarqueeRow.tsx", "target": "components/gotlui/LogoMarqueeRow.tsx" },
-      { "source": "logos.ts", "target": "components/gotlui/logos.ts" }
+      { "source": "logo-cloud-two.tsx", "target": "components/goltui/logo-cloud-two.tsx" },
+      { "source": "LogoMarqueeRow.tsx", "target": "components/goltui/LogoMarqueeRow.tsx" },
+      { "source": "logos.ts", "target": "components/goltui/logos.ts" }
     ]
   },
   "mouse-follow": {
     "description": "Four cursor-following effects: direct, spring, velocity-stretch blob, and link-hover image swap. Simple/Spring adapted from Skiper UI, credit required.",
     "dependencies": ["framer-motion"],
     "files": [
-      { "source": "mouse-follow.tsx", "target": "components/gotlui/mouse-follow.tsx" }
+      { "source": "mouse-follow.tsx", "target": "components/goltui/mouse-follow.tsx" }
     ],
     "assets": [
       { "source": "assets/cursors", "target": "public/cursors" }
     ],
     "import": {
       "name": "MouseFollowShowcase",
-      "path": "@/components/gotlui/mouse-follow"
+      "path": "@/components/goltui/mouse-follow"
     }
   },
   "text-scroll": {
     "description": "Scroll-driven text and icon animation (3 variants) with Lenis smooth scroll. Adapted from Skiper UI, credit required.",
     "dependencies": ["framer-motion", "lenis", "@icons-pack/react-simple-icons"],
     "files": [
-      { "source": "text-scroll/TextScrollAnimation.tsx", "target": "components/gotlui/text-scroll/TextScrollAnimation.tsx" },
-      { "source": "text-scroll/CharacterV1.tsx", "target": "components/gotlui/text-scroll/CharacterV1.tsx" },
-      { "source": "text-scroll/CharacterV2.tsx", "target": "components/gotlui/text-scroll/CharacterV2.tsx" },
-      { "source": "text-scroll/CharacterV3.tsx", "target": "components/gotlui/text-scroll/CharacterV3.tsx" }
+      { "source": "text-scroll/TextScrollAnimation.tsx", "target": "components/goltui/text-scroll/TextScrollAnimation.tsx" },
+      { "source": "text-scroll/CharacterV1.tsx", "target": "components/goltui/text-scroll/CharacterV1.tsx" },
+      { "source": "text-scroll/CharacterV2.tsx", "target": "components/goltui/text-scroll/CharacterV2.tsx" },
+      { "source": "text-scroll/CharacterV3.tsx", "target": "components/goltui/text-scroll/CharacterV3.tsx" }
     ],
     "import": {
       "name": "TextScrollAnimation",
-      "path": "@/components/gotlui/text-scroll/TextScrollAnimation"
+      "path": "@/components/goltui/text-scroll/TextScrollAnimation"
     }
   },
   "signup-one": {
     "description": "Signup form, split-screen layout with an image side.",
     "dependencies": ["@icons-pack/react-simple-icons"],
     "files": [
-      { "source": "signup-one/SignupOne.tsx", "target": "components/gotlui/signup-one/SignupOne.tsx" },
-      { "source": "signup-one/AuthField.tsx", "target": "components/gotlui/signup-one/AuthField.tsx" }
+      { "source": "signup-one/SignupOne.tsx", "target": "components/goltui/signup-one/SignupOne.tsx" },
+      { "source": "signup-one/AuthField.tsx", "target": "components/goltui/signup-one/AuthField.tsx" }
     ],
     "import": {
       "name": "SignupOne",
-      "path": "@/components/gotlui/signup-one/SignupOne"
+      "path": "@/components/goltui/signup-one/SignupOne"
     }
   },
   "signup-two": {
     "description": "Signup form, centered card layout.",
     "dependencies": [],
     "files": [
-      { "source": "signup-two/SignupTwo.tsx", "target": "components/gotlui/signup-two/SignupTwo.tsx" },
-      { "source": "signup-two/AuthField.tsx", "target": "components/gotlui/signup-two/AuthField.tsx" }
+      { "source": "signup-two/SignupTwo.tsx", "target": "components/goltui/signup-two/SignupTwo.tsx" },
+      { "source": "signup-two/AuthField.tsx", "target": "components/goltui/signup-two/AuthField.tsx" }
     ],
     "import": {
       "name": "SignupTwo",
-      "path": "@/components/gotlui/signup-two/SignupTwo"
+      "path": "@/components/goltui/signup-two/SignupTwo"
     }
   },
   "signup-three": {
     "description": "Signup form, minimal centered layout with Apple/Google sign-in.",
     "dependencies": ["@icons-pack/react-simple-icons"],
     "files": [
-      { "source": "signup-three/SignupThree.tsx", "target": "components/gotlui/signup-three/SignupThree.tsx" },
-      { "source": "signup-three/AuthField.tsx", "target": "components/gotlui/signup-three/AuthField.tsx" }
+      { "source": "signup-three/SignupThree.tsx", "target": "components/goltui/signup-three/SignupThree.tsx" },
+      { "source": "signup-three/AuthField.tsx", "target": "components/goltui/signup-three/AuthField.tsx" }
     ],
     "import": {
       "name": "SignupThree",
-      "path": "@/components/gotlui/signup-three/SignupThree"
+      "path": "@/components/goltui/signup-three/SignupThree"
     }
   },
   "plane-window-hero": {
     "description": "Full-viewport airplane-window intro hero with liquid-glass window optics and drifting clouds. Adapted from Aceternity UI; the real WebGL cloud shader is substituted with a canvas drift.",
     "dependencies": ["framer-motion"],
     "files": [
-      { "source": "plane-window-hero/PlaneWindowHero.tsx", "target": "components/gotlui/plane-window/PlaneWindowHero.tsx" },
-      { "source": "plane-window-hero/CloudShader.tsx", "target": "components/gotlui/plane-window/CloudShader.tsx" }
+      { "source": "plane-window-hero/PlaneWindowHero.tsx", "target": "components/goltui/plane-window/PlaneWindowHero.tsx" },
+      { "source": "plane-window-hero/CloudShader.tsx", "target": "components/goltui/plane-window/CloudShader.tsx" }
     ],
     "import": {
       "name": "PlaneWindowHero",
-      "path": "@/components/gotlui/plane-window/PlaneWindowHero"
+      "path": "@/components/goltui/plane-window/PlaneWindowHero"
     }
   },
   "voice-glow": {
     "description": "Sound-reactive glow — a centered, colorful beam along the bottom edge of any element that rises and blooms with voice intensity. From Libraries.dev (MIT).",
     "dependencies": [],
     "files": [
-      { "source": "voice-glow/index.ts", "target": "components/gotlui/voice-glow/index.ts" },
-      { "source": "voice-glow/VoiceBeam.tsx", "target": "components/gotlui/voice-glow/VoiceBeam.tsx" },
-      { "source": "voice-glow/voiceDriver.ts", "target": "components/gotlui/voice-glow/voiceDriver.ts" },
-      { "source": "voice-glow/styles.ts", "target": "components/gotlui/voice-glow/styles.ts" },
-      { "source": "voice-glow/presets.ts", "target": "components/gotlui/voice-glow/presets.ts" },
-      { "source": "voice-glow/types.ts", "target": "components/gotlui/voice-glow/types.ts" },
-      { "source": "voice-glow/useMicrophone.ts", "target": "components/gotlui/voice-glow/useMicrophone.ts" },
-      { "source": "voice-glow/audio.ts", "target": "components/gotlui/voice-glow/audio.ts" },
-      { "source": "voice-glow/color.ts", "target": "components/gotlui/voice-glow/color.ts" },
-      { "source": "voice-glow/VoiceGlowDemo.tsx", "target": "components/gotlui/voice-glow/VoiceGlowDemo.tsx" }
+      { "source": "voice-glow/index.ts", "target": "components/goltui/voice-glow/index.ts" },
+      { "source": "voice-glow/VoiceBeam.tsx", "target": "components/goltui/voice-glow/VoiceBeam.tsx" },
+      { "source": "voice-glow/voiceDriver.ts", "target": "components/goltui/voice-glow/voiceDriver.ts" },
+      { "source": "voice-glow/styles.ts", "target": "components/goltui/voice-glow/styles.ts" },
+      { "source": "voice-glow/presets.ts", "target": "components/goltui/voice-glow/presets.ts" },
+      { "source": "voice-glow/types.ts", "target": "components/goltui/voice-glow/types.ts" },
+      { "source": "voice-glow/useMicrophone.ts", "target": "components/goltui/voice-glow/useMicrophone.ts" },
+      { "source": "voice-glow/audio.ts", "target": "components/goltui/voice-glow/audio.ts" },
+      { "source": "voice-glow/color.ts", "target": "components/goltui/voice-glow/color.ts" },
+      { "source": "voice-glow/VoiceGlowDemo.tsx", "target": "components/goltui/voice-glow/VoiceGlowDemo.tsx" }
     ],
     "import": {
       "name": "{ VoiceBeam, useMicrophone }",
-      "path": "@/components/gotlui/voice-glow"
+      "path": "@/components/goltui/voice-glow"
     }
   },
   "border-beam": {
     "description": "Animated border effect — a traveling or breathing colorful beam around an element's edge. From Libraries.dev (MIT).",
     "dependencies": [],
     "files": [
-      { "source": "border-beam/index.ts", "target": "components/gotlui/border-beam/index.ts" },
-      { "source": "border-beam/BorderBeam.tsx", "target": "components/gotlui/border-beam/BorderBeam.tsx" },
-      { "source": "border-beam/pulseDriver.ts", "target": "components/gotlui/border-beam/pulseDriver.ts" },
-      { "source": "border-beam/styles.ts", "target": "components/gotlui/border-beam/styles.ts" },
-      { "source": "border-beam/types.ts", "target": "components/gotlui/border-beam/types.ts" },
-      { "source": "border-beam/BorderBeamDemo.tsx", "target": "components/gotlui/border-beam/BorderBeamDemo.tsx" }
+      { "source": "border-beam/index.ts", "target": "components/goltui/border-beam/index.ts" },
+      { "source": "border-beam/BorderBeam.tsx", "target": "components/goltui/border-beam/BorderBeam.tsx" },
+      { "source": "border-beam/pulseDriver.ts", "target": "components/goltui/border-beam/pulseDriver.ts" },
+      { "source": "border-beam/styles.ts", "target": "components/goltui/border-beam/styles.ts" },
+      { "source": "border-beam/types.ts", "target": "components/goltui/border-beam/types.ts" },
+      { "source": "border-beam/BorderBeamDemo.tsx", "target": "components/goltui/border-beam/BorderBeamDemo.tsx" }
     ],
     "import": {
       "name": "{ BorderBeam }",
-      "path": "@/components/gotlui/border-beam"
+      "path": "@/components/goltui/border-beam"
     }
   },
   "thinking-orbs": {
     "description": "Dotted thought-orb loading indicators for AI & agent UIs — nine hand-tuned animated states (working, searching, solving, listening, connecting, weaving, composing, breathing, shaping) on a plain 2D canvas. From Libraries.dev (MIT).",
     "dependencies": [],
     "files": [
-      { "source": "thinking-orbs/index.ts", "target": "components/gotlui/thinking-orbs/index.ts" },
-      { "source": "thinking-orbs/ThinkingOrb.tsx", "target": "components/gotlui/thinking-orbs/ThinkingOrb.tsx" },
-      { "source": "thinking-orbs/ThinkingOrbsDemo.tsx", "target": "components/gotlui/thinking-orbs/ThinkingOrbsDemo.tsx" },
-      { "source": "thinking-orbs/presets.ts", "target": "components/gotlui/thinking-orbs/presets.ts" },
-      { "source": "thinking-orbs/theme.ts", "target": "components/gotlui/thinking-orbs/theme.ts" },
-      { "source": "thinking-orbs/gravity.ts", "target": "components/gotlui/thinking-orbs/gravity.ts" },
-      { "source": "thinking-orbs/types.ts", "target": "components/gotlui/thinking-orbs/types.ts" },
-      { "source": "thinking-orbs/engine/index.ts", "target": "components/gotlui/thinking-orbs/engine/index.ts" },
-      { "source": "thinking-orbs/engine/types.ts", "target": "components/gotlui/thinking-orbs/engine/types.ts" },
-      { "source": "thinking-orbs/engine/core.ts", "target": "components/gotlui/thinking-orbs/engine/core.ts" },
-      { "source": "thinking-orbs/engine/registry.ts", "target": "components/gotlui/thinking-orbs/engine/registry.ts" },
-      { "source": "thinking-orbs/engine/profiles.ts", "target": "components/gotlui/thinking-orbs/engine/profiles.ts" },
-      { "source": "thinking-orbs/engine/orbits.ts", "target": "components/gotlui/thinking-orbs/engine/orbits.ts" },
-      { "source": "thinking-orbs/engine/lattice.ts", "target": "components/gotlui/thinking-orbs/engine/lattice.ts" },
-      { "source": "thinking-orbs/engine/web.ts", "target": "components/gotlui/thinking-orbs/engine/web.ts" },
-      { "source": "thinking-orbs/engine/braid.ts", "target": "components/gotlui/thinking-orbs/engine/braid.ts" },
-      { "source": "thinking-orbs/engine/ribbon.ts", "target": "components/gotlui/thinking-orbs/engine/ribbon.ts" },
-      { "source": "thinking-orbs/engine/morph.ts", "target": "components/gotlui/thinking-orbs/engine/morph.ts" }
+      { "source": "thinking-orbs/index.ts", "target": "components/goltui/thinking-orbs/index.ts" },
+      { "source": "thinking-orbs/ThinkingOrb.tsx", "target": "components/goltui/thinking-orbs/ThinkingOrb.tsx" },
+      { "source": "thinking-orbs/ThinkingOrbsDemo.tsx", "target": "components/goltui/thinking-orbs/ThinkingOrbsDemo.tsx" },
+      { "source": "thinking-orbs/presets.ts", "target": "components/goltui/thinking-orbs/presets.ts" },
+      { "source": "thinking-orbs/theme.ts", "target": "components/goltui/thinking-orbs/theme.ts" },
+      { "source": "thinking-orbs/gravity.ts", "target": "components/goltui/thinking-orbs/gravity.ts" },
+      { "source": "thinking-orbs/types.ts", "target": "components/goltui/thinking-orbs/types.ts" },
+      { "source": "thinking-orbs/engine/index.ts", "target": "components/goltui/thinking-orbs/engine/index.ts" },
+      { "source": "thinking-orbs/engine/types.ts", "target": "components/goltui/thinking-orbs/engine/types.ts" },
+      { "source": "thinking-orbs/engine/core.ts", "target": "components/goltui/thinking-orbs/engine/core.ts" },
+      { "source": "thinking-orbs/engine/registry.ts", "target": "components/goltui/thinking-orbs/engine/registry.ts" },
+      { "source": "thinking-orbs/engine/profiles.ts", "target": "components/goltui/thinking-orbs/engine/profiles.ts" },
+      { "source": "thinking-orbs/engine/orbits.ts", "target": "components/goltui/thinking-orbs/engine/orbits.ts" },
+      { "source": "thinking-orbs/engine/lattice.ts", "target": "components/goltui/thinking-orbs/engine/lattice.ts" },
+      { "source": "thinking-orbs/engine/web.ts", "target": "components/goltui/thinking-orbs/engine/web.ts" },
+      { "source": "thinking-orbs/engine/braid.ts", "target": "components/goltui/thinking-orbs/engine/braid.ts" },
+      { "source": "thinking-orbs/engine/ribbon.ts", "target": "components/goltui/thinking-orbs/engine/ribbon.ts" },
+      { "source": "thinking-orbs/engine/morph.ts", "target": "components/goltui/thinking-orbs/engine/morph.ts" }
     ],
     "import": {
       "name": "{ ThinkingOrb }",
-      "path": "@/components/gotlui/thinking-orbs"
+      "path": "@/components/goltui/thinking-orbs"
     }
   },
   "header-01": {
     "description": "Site header, two-column mega menu dropdown.",
     "dependencies": ["framer-motion"],
-    "files": [{ "source": "header-01.tsx", "target": "components/gotlui/header-01.tsx" }]
+    "files": [{ "source": "header-01.tsx", "target": "components/goltui/header-01.tsx" }]
   },
   "header-02": {
     "description": "Site header, grid dropdown with promo panels.",
     "dependencies": ["framer-motion"],
-    "files": [{ "source": "header-02.tsx", "target": "components/gotlui/header-02.tsx" }]
+    "files": [{ "source": "header-02.tsx", "target": "components/goltui/header-02.tsx" }]
   },
   "header-03": {
     "description": "Site header, compact single-column dropdown.",
     "dependencies": ["framer-motion"],
-    "files": [{ "source": "header-03.tsx", "target": "components/gotlui/header-03.tsx" }]
+    "files": [{ "source": "header-03.tsx", "target": "components/goltui/header-03.tsx" }]
   },
   "header-04": {
     "description": "Site header, sidebar-label dropdown.",
     "dependencies": ["framer-motion"],
-    "files": [{ "source": "header-04.tsx", "target": "components/gotlui/header-04.tsx" }]
+    "files": [{ "source": "header-04.tsx", "target": "components/goltui/header-04.tsx" }]
   },
   "header-05": {
     "description": "Site header that hides on scroll down, shows on scroll up, with a preview panel in its dropdown.",
     "dependencies": ["framer-motion"],
-    "files": [{ "source": "header-05.tsx", "target": "components/gotlui/header-05.tsx" }]
+    "files": [{ "source": "header-05.tsx", "target": "components/goltui/header-05.tsx" }]
   },
   "header-06": {
     "description": "Site header with simple links and a full-screen mobile menu.",
     "dependencies": ["framer-motion"],
-    "files": [{ "source": "header-06.tsx", "target": "components/gotlui/header-06.tsx" }]
+    "files": [{ "source": "header-06.tsx", "target": "components/goltui/header-06.tsx" }]
   }
 }

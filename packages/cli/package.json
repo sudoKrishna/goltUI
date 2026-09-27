@@ -1,10 +1,10 @@
 {
-  "name": "gotlui",
+  "name": "goltui",
   "version": "0.0.1",
-  "description": "CLI to add gotlUI components to your project",
+  "description": "CLI to add goltUI components to your project",
   "type": "module",
   "bin": {
-    "gotlui": "bin/gotlui.js"
+    "goltui": "bin/goltui.js"
   },
   "files": [
     "bin",

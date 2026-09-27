@@ -1,8 +1,8 @@
-# gotlui
+# goltui
 
 **Copy-paste React + Tailwind components, delivered by CLI.**
 
-`gotlui` writes a component's real source into your project, installs the npm
+`goltui` writes a component's real source into your project, installs the npm
 packages it needs, and gets out of the way. There is no runtime dependency to
 import from — you own the code.
 
@@ -11,13 +11,13 @@ import from — you own the code.
 Run it inside any Next.js + Tailwind project:
 
 ```bash
-npx gotlui add input-mic
+npx goltui add input-mic
 ```
 
 List everything available:
 
 ```bash
-npx gotlui
+npx goltui
 ```
 
 That's it — no `init`, no config file.
@@ -26,8 +26,8 @@ That's it — no `init`, no config file.
 
 1. The component is looked up in the bundled registry.
 2. Its file(s) are copied into:
-   - `components/gotlui/…`, or
-   - `src/components/gotlui/…` if your project has a `src/` directory.
+   - `components/goltui/…`, or
+   - `src/components/goltui/…` if your project has a `src/` directory.
    Existing files are **skipped**, never overwritten.
 3. Any bundled assets are copied into `public/`.
 4. The component's dependencies are installed with the package manager detected
@@ -41,7 +41,7 @@ That's it — no `init`, no config file.
 
 ## Available components
 
-Install any of these with `npx gotlui add <name>`.
+Install any of these with `npx goltui add <name>`.
 
 **Buttons & inputs**
 `button` · `button-sizes` · `button-destructive` · `button-spinner` · `input-mic`
