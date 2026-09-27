@@ -4,7 +4,7 @@ import Footer from "@/components/Footer"
 import OrbCatcher from "@/components/game/OrbCatcher"
 
 export const metadata: Metadata = {
-  title: "Play — Orb Catcher | gotlUI",
+  title: "Play — Orb Catcher | goltUI",
   description:
     "A tiny playable game built entirely with Framer Motion motion values, springs, and AnimatePresence.",
 }

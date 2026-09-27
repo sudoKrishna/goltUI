@@ -1,7 +1,7 @@
 import CodeBlock from "@/components/CodeBlock"
 import ThinkingOrbsDemo from "@/components/thinking-orbs/ThinkingOrbsDemo"
 
-const usageCode = `import { ThinkingOrb } from "@/components/gotlui/thinking-orbs"
+const usageCode = `import { ThinkingOrb } from "@/components/goltui/thinking-orbs"
 
 function Status() {
   return <ThinkingOrb state="searching" size={64} />
@@ -74,7 +74,7 @@ export default function ThinkingOrbsDocsPage() {
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">
         Installation
       </h2>
-      <CodeBlock code="npx gotlui add thinking-orbs" />
+      <CodeBlock code="npx goltui add thinking-orbs" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

@@ -1,7 +1,7 @@
 import CodeBlock from "@/components/CodeBlock"
 import VoiceGlowDemo from "@/components/voice-glow/VoiceGlowDemo"
 
-const usageCode = `import { VoiceBeam, useMicrophone } from "@/components/gotlui/voice-glow"
+const usageCode = `import { VoiceBeam, useMicrophone } from "@/components/goltui/voice-glow"
 
 function Chat() {
   const mic = useMicrophone()
@@ -52,7 +52,7 @@ export default function VoiceGlowDocsPage() {
       </div>
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Installation</h2>
-      <CodeBlock code="npx gotlui add voice-glow" />
+      <CodeBlock code="npx goltui add voice-glow" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

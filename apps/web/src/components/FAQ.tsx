@@ -8,15 +8,15 @@ const faqSections = [
     category: "General",
     faqs: [
       {
-        q: "What exactly do I get with gotlUI Pro?",
+        q: "What exactly do I get with goltUI Pro?",
         a: "Lifetime access to every block, animated component, and full-page template in the library, plus everything added afterward.",
       },
       {
-        q: "Who should use gotlUI Pro?",
+        q: "Who should use goltUI Pro?",
         a: "Developers and small teams who want production-ready UI without spending weeks designing and animating it from scratch.",
       },
       {
-        q: "How is gotlUI Pro different from free UI libraries?",
+        q: "How is goltUI Pro different from free UI libraries?",
         a: "The free registry covers core components; Pro adds full templates, richer motion, and priority updates on top of it.",
       },
       {
@@ -37,7 +37,7 @@ const faqSections = [
     category: "Licensing",
     faqs: [
       {
-        q: "Can I use gotlUI Pro in commercial projects?",
+        q: "Can I use goltUI Pro in commercial projects?",
         a: "Yes. Your one-time payment covers unlimited personal and commercial projects.",
       },
       {
@@ -58,7 +58,7 @@ const faqSections = [
     category: "Technical",
     faqs: [
       {
-        q: "Is gotlUI Pro TypeScript friendly?",
+        q: "Is goltUI Pro TypeScript friendly?",
         a: "Every component ships with full TypeScript types out of the box.",
       },
       {
@@ -122,7 +122,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="mt-3 text-zinc-400">
-            Common questions about gotlUI Pro, from licensing and updates to
+            Common questions about goltUI Pro, from licensing and updates to
             how it fits your workflow.
           </p>
         </div>

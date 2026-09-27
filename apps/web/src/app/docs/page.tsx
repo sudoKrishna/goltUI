@@ -6,7 +6,7 @@ export default function DocsIntroPage() {
     <section className="max-w-3xl py-20">
       <h1 className="text-3xl font-semibold text-white sm:text-4xl">Introduction</h1>
       <p className="mt-3 text-zinc-400">
-        gotlUI is a copy-paste library of React + Tailwind components and
+        goltUI is a copy-paste library of React + Tailwind components and
         blocks. There&apos;s no package to depend on — the CLI copies each
         component&apos;s source directly into your project, so you own the
         code and can edit it freely.
@@ -16,8 +16,8 @@ export default function DocsIntroPage() {
       <p className="text-zinc-400">
         Unlike a traditional npm package, running the CLI doesn&apos;t add a
         dependency to import from — it writes the component&apos;s actual
-        source file(s) into <code className="text-zinc-300">components/gotlui/</code>{" "}
-        in your project (or <code className="text-zinc-300">src/components/gotlui/</code>{" "}
+        source file(s) into <code className="text-zinc-300">components/goltui/</code>{" "}
+        in your project (or <code className="text-zinc-300">src/components/goltui/</code>{" "}
         if you use a <code className="text-zinc-300">src/</code> layout), and
         installs whatever npm packages that component needs.
       </p>
@@ -28,7 +28,7 @@ export default function DocsIntroPage() {
         component name for the one you want:
       </p>
       <div className="mt-4">
-        <CodeBlock code="npx gotlui add input-mic" />
+        <CodeBlock code="npx goltui add input-mic" />
       </div>
       <p className="mt-4 text-zinc-400">
         That&apos;s it — no config file, no init step. Browse the{" "}
@@ -78,10 +78,10 @@ export default function DocsIntroPage() {
         manager automatically:
       </p>
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <CodeBlock label="npm" code="npx gotlui add input-mic" />
-        <CodeBlock label="pnpm" code="pnpm dlx gotlui add input-mic" />
-        <CodeBlock label="yarn" code="yarn dlx gotlui add input-mic" />
-        <CodeBlock label="bun" code="bunx gotlui add input-mic" />
+        <CodeBlock label="npm" code="npx goltui add input-mic" />
+        <CodeBlock label="pnpm" code="pnpm dlx goltui add input-mic" />
+        <CodeBlock label="yarn" code="yarn dlx goltui add input-mic" />
+        <CodeBlock label="bun" code="bunx goltui add input-mic" />
       </div>
     </section>
   )
