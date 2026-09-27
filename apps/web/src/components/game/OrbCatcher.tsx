@@ -11,7 +11,7 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react"
 
 const ROUND_SECONDS = 30
-const BEST_KEY = "gotlui-orb-catcher-best"
+const BEST_KEY = "goltui-orb-catcher-best"
 const FALL_START = { top: "-8%", opacity: 0 }
 const FALL_TARGET = { top: "92%", opacity: 1 }
 
