@@ -33,7 +33,7 @@ export default async function ComingSoonBlockPage({
       <p className="mt-5 max-w-xl text-balance text-zinc-400">
         We&apos;re hand-crafting{" "}
         <span className="text-zinc-200">{name.toLowerCase()}</span> blocks with
-        the same polish as the rest of gotlUI. It isn&apos;t available yet — check
+        the same polish as the rest of goltUI. It isn&apos;t available yet — check
         back soon.
       </p>
 

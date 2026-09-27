@@ -2,13 +2,13 @@ import LogoCloud from "@/components/logos/LogoCloud"
 import LogoCloudTwo from "@/components/logos/LogoCloudTwo"
 import BlockPreview from "@/components/BlockPreview"
 
-const code = `import LogoCloud from "@/components/gotlui/logo-cloud"
+const code = `import LogoCloud from "@/components/goltui/logo-cloud"
 
 export default function Page() {
   return <LogoCloud />
 }`
 
-const code2 = `import LogoCloudTwo from "@/components/gotlui/logo-cloud-two"
+const code2 = `import LogoCloudTwo from "@/components/goltui/logo-cloud-two"
 
 export default function Page() {
   return <LogoCloudTwo />
@@ -27,7 +27,7 @@ export default function LogoCloudBlockPage() {
 
       <div className="space-y-20">
         <div className="mt-10">
-          <BlockPreview install="npx gotlui add logo-cloud" code={code}>
+          <BlockPreview install="npx goltui add logo-cloud" code={code}>
             <LogoCloud />
           </BlockPreview>
         </div>
@@ -35,7 +35,7 @@ export default function LogoCloudBlockPage() {
         <div className="mt-10">
           <h2 className="text-2xl font-semibold text-white">Logo Cloud 02</h2>
           <div className="mt-6">
-            <BlockPreview install="npx gotlui add logo-cloud-two" code={code2}>
+            <BlockPreview install="npx goltui add logo-cloud-two" code={code2}>
               <LogoCloudTwo />
             </BlockPreview>
           </div>

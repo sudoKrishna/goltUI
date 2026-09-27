@@ -1,7 +1,7 @@
 import CodeBlock from "@/components/CodeBlock"
 import BorderBeamDemo from "@/components/border-beam/BorderBeamDemo"
 
-const usageCode = `import { BorderBeam } from "@/components/gotlui/border-beam"
+const usageCode = `import { BorderBeam } from "@/components/goltui/border-beam"
 
 function Card() {
   return (
@@ -81,7 +81,7 @@ export default function BorderBeamDocsPage() {
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">
         Installation
       </h2>
-      <CodeBlock code="npx gotlui add border-beam" />
+      <CodeBlock code="npx goltui add border-beam" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

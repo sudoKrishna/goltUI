@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "gotlUI — Copy-paste UI blocks for React & Tailwind",
+  title: "goltUI — Copy-paste UI blocks for React & Tailwind",
   description:
-    "gotlUI is a copy-paste library of React + Tailwind components, blocks, and templates.",
+    "goltUI is a copy-paste library of React + Tailwind components, blocks, and templates.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

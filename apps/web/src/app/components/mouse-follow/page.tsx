@@ -11,7 +11,7 @@ const usageCode = `import {
   SpringMouseFollow,
   VelocityStretchMouseFollow,
   LinkHoverImageCursor,
-} from "@/components/gotlui/mouse-follow"
+} from "@/components/goltui/mouse-follow"
 
 // Native cursor everywhere, except hovering a link/button —
 // then this image follows the pointer instead:
@@ -27,7 +27,7 @@ export default function MouseFollowDocsPage() {
       </p>
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Installation</h2>
-      <CodeBlock code="npx gotlui add mouse-follow" />
+      <CodeBlock code="npx goltui add mouse-follow" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

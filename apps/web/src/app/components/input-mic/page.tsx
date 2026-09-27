@@ -13,7 +13,7 @@ const props = [
 ]
 
 const usageCode = `import { useState } from "react"
-import InputMic from "@/components/gotlui/input-mic"
+import InputMic from "@/components/goltui/input-mic"
 
 export default function Chat() {
   const [value, setValue] = useState("")
@@ -47,7 +47,7 @@ export default function InputMicDocsPage() {
       </div>
 
       <h2 className="mt-14 mb-3 text-lg font-medium text-white">Installation</h2>
-      <CodeBlock code="npx gotlui add input-mic" />
+      <CodeBlock code="npx goltui add input-mic" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

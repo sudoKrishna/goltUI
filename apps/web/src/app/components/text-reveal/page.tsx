@@ -9,7 +9,7 @@ const props = [
   { name: "staggerDelay", type: "number", default: "0.2", desc: "Delay between each word's animation start time." },
 ]
 
-const usageCode = `import TextReveal from "@/components/gotlui/text-reveal"
+const usageCode = `import TextReveal from "@/components/goltui/text-reveal"
 
 export default function Example() {
   return (
@@ -31,13 +31,13 @@ export default function TextRevealDocsPage() {
 
       <div className="mt-10 flex min-h-[140px] items-center justify-center rounded-2xl border border-white/10 bg-zinc-950 p-10 text-center">
         <TextReveal
-          text="ForgeUI is a beautifully designed component library built with Tailwind CSS and Motion."
+          text="GoltUI is a beautifully designed component library built with Tailwind CSS and Motion."
           className="justify-center text-lg font-semibold text-white"
         />
       </div>
 
       <h2 className="mt-14 mb-3 text-lg font-medium text-white">Installation</h2>
-      <CodeBlock code="npx gotlui add text-reveal" />
+      <CodeBlock code="npx goltui add text-reveal" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

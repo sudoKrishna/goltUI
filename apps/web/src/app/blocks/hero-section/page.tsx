@@ -4,19 +4,19 @@ import HeroSectionTwo from "@/components/HeroSectionTwo"
 import PlaneWindowHero from "@/components/plane-window/PlaneWindowHero"
 import BlockPreview from "@/components/BlockPreview"
 
-const code = `import HeroSection from "@/components/gotlui/hero-section"
+const code = `import HeroSection from "@/components/goltui/hero-section"
 
 export default function Page() {
   return <HeroSection />
 }`
 
-const code2 = `import HeroSectionTwo from "@/components/gotlui/hero-section-two"
+const code2 = `import HeroSectionTwo from "@/components/goltui/hero-section-two"
 
 export default function Page() {
   return <HeroSectionTwo />
 }`
 
-const code3 = `import PlaneWindowHero from "@/components/gotlui/plane-window/PlaneWindowHero"
+const code3 = `import PlaneWindowHero from "@/components/goltui/plane-window/PlaneWindowHero"
 
 // The window is pinned and zooms in as you scroll past it — by the
 // time you've scrolled through, it's zoomed past the viewport edges
@@ -37,13 +37,13 @@ export default function HeroSectionBlockPage() {
       </p>
       <div className="space-y-20">
       <div className="mt-10">
-        <BlockPreview install="npx gotlui add hero-section" code={code}>
+        <BlockPreview install="npx goltui add hero-section" code={code}>
           <HeroSection />
         </BlockPreview>
       </div>
 
       <div className="mt-10">
-        <BlockPreview install="npx gotlui add hero-section-two" code={code2}>
+        <BlockPreview install="npx goltui add hero-section-two" code={code2}>
           <HeroSectionTwo />
         </BlockPreview>
       </div>
@@ -69,7 +69,7 @@ export default function HeroSectionBlockPage() {
           </Link>
         </div>
         <div className="mt-6">
-          <BlockPreview install="npx gotlui add plane-window-hero" code={code3}>
+          <BlockPreview install="npx goltui add plane-window-hero" code={code3}>
             <div className="h-[700px] overflow-y-auto">
               <PlaneWindowHero />
             </div>

@@ -9,8 +9,8 @@ import BlockPreview from "@/components/BlockPreview"
 const headers = [
   {
     title: "Header 01 — Two-column mega menu",
-    install: "npx gotlui add header-01",
-    code: `import Header01 from "@/components/gotlui/header-01"
+    install: "npx goltui add header-01",
+    code: `import Header01 from "@/components/goltui/header-01"
 
 export default function Page() {
   return <Header01 />
@@ -19,8 +19,8 @@ export default function Page() {
   },
   {
     title: "Header 02 — Grid dropdown with promo panels",
-    install: "npx gotlui add header-02",
-    code: `import Header02 from "@/components/gotlui/header-02"
+    install: "npx goltui add header-02",
+    code: `import Header02 from "@/components/goltui/header-02"
 
 export default function Page() {
   return <Header02 />
@@ -29,8 +29,8 @@ export default function Page() {
   },
   {
     title: "Header 03 — Compact single-column dropdown",
-    install: "npx gotlui add header-03",
-    code: `import Header03 from "@/components/gotlui/header-03"
+    install: "npx goltui add header-03",
+    code: `import Header03 from "@/components/goltui/header-03"
 
 export default function Page() {
   return <Header03 />
@@ -39,8 +39,8 @@ export default function Page() {
   },
   {
     title: "Header 04 — Sidebar-label dropdown",
-    install: "npx gotlui add header-04",
-    code: `import Header04 from "@/components/gotlui/header-04"
+    install: "npx goltui add header-04",
+    code: `import Header04 from "@/components/goltui/header-04"
 
 export default function Page() {
   return <Header04 />
@@ -49,8 +49,8 @@ export default function Page() {
   },
   {
     title: "Header 05 — Hide-on-scroll with preview panel",
-    install: "npx gotlui add header-05",
-    code: `import Header05 from "@/components/gotlui/header-05"
+    install: "npx goltui add header-05",
+    code: `import Header05 from "@/components/goltui/header-05"
 
 export default function Page() {
   return <Header05 />
@@ -59,8 +59,8 @@ export default function Page() {
   },
   {
     title: "Header 06 — Simple links, mobile menu",
-    install: "npx gotlui add header-06",
-    code: `import Header06 from "@/components/gotlui/header-06"
+    install: "npx goltui add header-06",
+    code: `import Header06 from "@/components/goltui/header-06"
 
 export default function Page() {
   return <Header06 />

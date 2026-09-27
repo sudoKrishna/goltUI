@@ -8,25 +8,25 @@ const sections = [
   {
     title: "Button",
     desc: "The base button, dark and light variants.",
-    install: "npx gotlui add button",
+    install: "npx goltui add button",
     preview: <ButtonDefault />,
   },
   {
     title: "Sizes",
     desc: "Extra Small, Small, Default, and Large.",
-    install: "npx gotlui add button-sizes",
+    install: "npx goltui add button-sizes",
     preview: <ButtonSizes />,
   },
   {
     title: "Destructive",
     desc: "For delete/destructive actions.",
-    install: "npx gotlui add button-destructive",
+    install: "npx goltui add button-destructive",
     preview: <ButtonDestructive />,
   },
   {
     title: "Spinner",
     desc: "Disabled loading state with a spinning icon.",
-    install: "npx gotlui add button-spinner",
+    install: "npx goltui add button-spinner",
     preview: <ButtonSpinner />,
   },
 ]
