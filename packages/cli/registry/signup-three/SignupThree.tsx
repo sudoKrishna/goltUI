@@ -13,9 +13,9 @@ export default function SignupThree() {
               <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white text-sm font-bold text-black">
                 G
               </span>
-              <span className="sr-only">gotlUI</span>
+              <span className="sr-only">goltUI</span>
             </a>
-            <h1 className="text-xl font-bold text-white">Welcome to gotlUI</h1>
+            <h1 className="text-xl font-bold text-white">Welcome to goltUI</h1>
             <p className="text-sm text-zinc-400">
               Already have an account?{" "}
               <a href="#" className="text-white underline underline-offset-2">

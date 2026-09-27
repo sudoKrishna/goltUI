@@ -58,7 +58,7 @@ export default function TextScrollAnimation() {
   const { scrollYProgress: scrollYProgress2 } = useScroll({ target: targetRef2 });
   const { scrollYProgress: scrollYProgress3 } = useScroll({ target: targetRef3 });
 
-  const text = "gotlui scroll";
+  const text = "goltui scroll";
   const characters = text.split("");
   const centerIndex = Math.floor(characters.length / 2);
 
