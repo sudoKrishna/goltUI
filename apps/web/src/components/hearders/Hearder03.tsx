@@ -135,7 +135,7 @@ export default function Header03() {
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs font-bold text-black">
             ●
           </span>
-          <span className="text-sm font-semibold text-white">gotlUI</span>
+          <span className="text-sm font-semibold text-white">goltUI</span>
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
