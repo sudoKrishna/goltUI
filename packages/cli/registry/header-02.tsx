@@ -102,7 +102,7 @@ export default function Header02() {
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs font-bold text-black">
             ●
           </span>
-          <span className="text-sm font-semibold text-white">gotlUI</span>
+          <span className="text-sm font-semibold text-white">goltUI</span>
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
@@ -164,7 +164,7 @@ export default function Header02() {
                           <div className="aspect-video rounded bg-white/10" />
                         </div>
                         <p className="text-xs font-medium text-zinc-300">Showcase</p>
-                        <p className="text-[10px] text-zinc-500">Real products built with gotlUI.</p>
+                        <p className="text-[10px] text-zinc-500">Real products built with goltUI.</p>
                       </div>
                     </div>
                   </motion.div>
