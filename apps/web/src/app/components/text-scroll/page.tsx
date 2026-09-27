@@ -8,7 +8,7 @@ const props = [
   { name: "scrollYProgress", type: "MotionValue<number>", desc: "Framer Motion's scroll progress (0–1) for the target section, driving all the transforms." },
 ]
 
-const usageCode = `import TextScrollAnimation from "@/components/gotlui/text-scroll/TextScrollAnimation"
+const usageCode = `import TextScrollAnimation from "@/components/goltui/text-scroll/TextScrollAnimation"
 
 export default function Page() {
   return <TextScrollAnimation />
@@ -39,7 +39,7 @@ export default function TextScrollDocsPage() {
       </div>
 
       <h2 className="mt-14 mb-3 text-lg font-medium text-white">Installation</h2>
-      <CodeBlock code="npx gotlui add text-scroll" />
+      <CodeBlock code="npx goltui add text-scroll" />
 
       <h2 className="mt-10 mb-3 text-lg font-medium text-white">Usage</h2>
       <CodeBlock label="page.tsx" code={usageCode} />

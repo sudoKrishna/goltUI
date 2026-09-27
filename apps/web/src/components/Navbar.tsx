@@ -64,7 +64,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/70 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="/" className="flex items-center gap-2 text-lg font-semibold text-white">
-          gotlUI
+          goltUI
         </a>
 
         <div className="hidden items-center gap-8 text-sm text-zinc-400 md:flex">

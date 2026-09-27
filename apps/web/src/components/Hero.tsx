@@ -25,7 +25,7 @@ export default function Hero() {
       </h1>
 
       <p className="mt-6 max-w-xl text-balance text-base text-zinc-400 sm:text-lg">
-        gotlUI is a copy-paste library of React + Tailwind components, blocks,
+        goltUI is a copy-paste library of React + Tailwind components, blocks,
         and templates — built for developers who want production-ready UI in
         minutes, not weeks.
       </p>

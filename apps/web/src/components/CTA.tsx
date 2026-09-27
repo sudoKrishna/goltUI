@@ -13,7 +13,7 @@ export default function CTA() {
         className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-transparent px-8 py-16"
       >
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-          Ship faster with gotlUI Pro
+          Ship faster with goltUI Pro
         </h2>
         <p className="mx-auto mt-3 max-w-md text-zinc-400">
           A complete UI kit for developers who value speed, polish, and

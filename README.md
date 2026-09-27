@@ -1,6 +1,6 @@
 <div align="center">
 
-# gotlUI
+# goltUI
 
 **Copy-paste React + Tailwind components and blocks. Own the source, ship faster.**
 
@@ -17,7 +17,7 @@
 
 ---
 
-gotlUI is a **copy-paste UI library**. There is no runtime package to depend on —
+goltUI is a **copy-paste UI library**. There is no runtime package to depend on —
 the CLI writes each component's real source into your project, installs whatever
 npm packages it needs, and leaves you to edit the code freely.
 
@@ -26,7 +26,7 @@ The repo is a Turborepo monorepo with two publishable pieces:
 | Artifact | Package | Ships to | Purpose |
 | --- | --- | --- | --- |
 | **Website** | `apps/web` | Vercel | Docs, component gallery, blocks, live previews |
-| **CLI** | `packages/cli` (`gotlui`) | npm | `npx gotlui add <component>` |
+| **CLI** | `packages/cli` (`goltui`) | npm | `npx goltui add <component>` |
 
 ---
 
@@ -48,7 +48,7 @@ The repo is a Turborepo monorepo with two publishable pieces:
 
 ## Features
 
-- **You own the code** — components are copied as source into `components/gotlui/`, not installed as an opaque dependency.
+- **You own the code** — components are copied as source into `components/goltui/`, not installed as an opaque dependency.
 - **Zero-config CLI** — no `init`, no config file. It detects your package manager and whether you use a `src/` layout.
 - **25 production-ready components & blocks** — buttons, inputs, heroes, logo clouds, auth layouts, headers, loaders, cursor and sound effects.
 - **Motion-first** — built with [Framer Motion](https://www.framer.com/motion/) springs, layout and exit animations.
@@ -77,7 +77,7 @@ The repo is a Turborepo monorepo with two publishable pieces:
 ## Repository Structure
 
 ```
-gotlUI/
+goltUI/
 ├── apps/
 │   └── web/                    # Next.js site (docs, gallery, blocks, /play game)
 │       └── src/
@@ -90,8 +90,8 @@ gotlUI/
 │           ├── components/     # The actual component source
 │           └── lib/            # Shared data (e.g. block categories)
 └── packages/
-    └── cli/                    # Published npm package: `gotlui`
-        ├── bin/gotlui.js       # CLI entry point
+    └── cli/                    # Published npm package: `goltui`
+        ├── bin/goltui.js       # CLI entry point
         └── registry/           # Component source + registry.json (what the CLI copies)
 ```
 
@@ -139,20 +139,20 @@ bun start      # serve the production build
 
 ## CLI
 
-The `gotlui` CLI copies component source straight into your project.
+The `goltui` CLI copies component source straight into your project.
 
 ```bash
 # install a component (run in your own Next.js + Tailwind project)
-npx gotlui add input-mic
+npx goltui add input-mic
 
 # see everything available
-npx gotlui
+npx goltui
 ```
 
 **What it does, in order:**
 
 1. Looks up the component in the bundled registry.
-2. Copies its file(s) into `components/gotlui/…` — or `src/components/gotlui/…` if your project has a `src/` directory. Existing files are skipped, never overwritten.
+2. Copies its file(s) into `components/goltui/…` — or `src/components/goltui/…` if your project has a `src/` directory. Existing files are skipped, never overwritten.
 3. Copies any bundled assets into `public/`.
 4. Installs the component's npm dependencies using the package manager it detects from your lockfile.
 5. Prints the exact import to paste.
@@ -166,7 +166,7 @@ No init step. No config. No package added to your `dependencies`.
 
 ## Component Catalog
 
-Install any of these with `npx gotlui add <name>`.
+Install any of these with `npx goltui add <name>`.
 
 <details open>
 <summary><strong>Buttons &amp; inputs</strong></summary>
@@ -264,7 +264,7 @@ Install any of these with `npx gotlui add <name>`.
        "description": "One-line description shown by the CLI.",
        "dependencies": ["framer-motion"],
        "files": [
-         { "source": "my-component/index.ts", "target": "components/gotlui/my-component/index.ts" }
+         { "source": "my-component/index.ts", "target": "components/goltui/my-component/index.ts" }
        ]
      }
    }
@@ -275,14 +275,14 @@ Install any of these with `npx gotlui add <name>`.
    - `import` — optional override for the printed import when the slug doesn't map cleanly:
 
      ```json
-     "import": { "name": "{ MyComponent }", "path": "@/components/gotlui/my-component" }
+     "import": { "name": "{ MyComponent }", "path": "@/components/goltui/my-component" }
      ```
 
 4. **Test it** against a scratch project before publishing:
 
    ```bash
-   mkdir /tmp/gotlui-test && cd /tmp/gotlui-test && echo '{}' > package.json && mkdir src
-   node /path/to/gotlUI/packages/cli/bin/gotlui.js add my-component
+   mkdir /tmp/goltui-test && cd /tmp/goltui-test && echo '{}' > package.json && mkdir src
+   node /path/to/goltUI/packages/cli/bin/goltui.js add my-component
    ```
 
 ---
@@ -311,10 +311,10 @@ npx vercel --prod
 ```bash
 cd packages/cli
 npm login
-npm publish --access public   # package name: gotlui
+npm publish --access public   # package name: goltui
 ```
 
-Then users can run `npx gotlui add <component>`.
+Then users can run `npx goltui add <component>`.
 
 ---
 
@@ -346,4 +346,4 @@ requirements. Please preserve these credits:
 
 ## License
 
-[MIT](./LICENSE) © gotlUI
+[MIT](./LICENSE) © goltUI

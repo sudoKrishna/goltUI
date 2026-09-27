@@ -12,7 +12,7 @@ export default function SignupOne() {
             <span className="flex h-6 w-6 items-center justify-center rounded-md bg-white text-xs font-bold text-black">
               G
             </span>
-            gotlUI
+            goltUI
           </a>
         </div>
 

@@ -36,7 +36,7 @@ export default function Footer() {
             <span className="flex h-7 w-7 items-center justify-center rounded-md bg-white text-sm font-bold text-black">
               G
             </span>
-            gotlUI
+            goltUI
           </a>
           <p className="mt-3 max-w-[200px] text-sm text-zinc-500">
             Build beautiful interfaces with our component library and design
@@ -105,7 +105,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6 text-sm text-zinc-600">
-        © {new Date().getFullYear()} gotlUI. All rights reserved.
+        © {new Date().getFullYear()} goltUI. All rights reserved.
       </div>
     </footer>
   );
