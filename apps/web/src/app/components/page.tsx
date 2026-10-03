@@ -101,6 +101,18 @@ const components = [
     ),
   },
   {
+    slug: "disintegrate-on-scroll",
+    name: "Disintegrate On Scroll",
+    description: "Reusable wrapper that dissolves its children into wind-blown particles on scroll, via html2canvas and GSAP.",
+    available: true,
+    preview: (
+      <div className="flex flex-col items-center justify-center gap-1 text-xs text-zinc-500">
+        <span className="text-2xl font-bold uppercase tracking-tighter text-[#ff4b26]">Dissolve</span>
+        <span>opens as a full-page preview</span>
+      </div>
+    ),
+  },
+  {
     slug: "card",
     name: "Card",
     description: "Content card with hover motion.",

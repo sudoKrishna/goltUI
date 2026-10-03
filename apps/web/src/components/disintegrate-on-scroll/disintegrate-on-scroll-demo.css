@@ -1,0 +1,99 @@
+.dosc-demo-hero {
+  background: #ff4b26;
+  color: #fff;
+}
+
+.dosc-demo-live {
+  position: absolute;
+  top: 13vh;
+  left: 13.5vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 12px/1 "Courier New", monospace;
+  letter-spacing: .18em;
+}
+
+.dosc-demo-live span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.dosc-demo-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8vw 24px;
+  text-align: center;
+}
+
+.dosc-demo-center h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 5.2vw, 88px);
+  font-weight: 400;
+  line-height: .94;
+  letter-spacing: -.055em;
+}
+
+.dosc-demo-center h1 em {
+  font-style: italic;
+}
+
+.dosc-demo-center p {
+  max-width: 660px;
+  margin: 38px auto 42px;
+  font: 17px/1.55 Arial, sans-serif;
+}
+
+.dosc-demo-center button {
+  border: 0;
+  padding: 20px 32px;
+  background: #fff;
+  color: #ff4b26;
+  font: 12px/1 "Courier New", monospace;
+  letter-spacing: .16em;
+  cursor: pointer;
+}
+
+.dosc-demo-next {
+  min-height: 100svh;
+  padding: 14vh 13.5vw;
+  background: #f3eee7;
+  color: #111;
+}
+
+.dosc-demo-next span {
+  font: 12px/1 "Courier New", monospace;
+  letter-spacing: .14em;
+}
+
+.dosc-demo-next h2 {
+  margin: 14vh 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 8vw, 130px);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+
+@media (max-width: 700px) {
+  .dosc-demo-live {
+    top: 9vh;
+    left: 24px;
+  }
+
+  .dosc-demo-center h1 {
+    font-size: clamp(48px, 13vw, 68px);
+  }
+
+  .dosc-demo-center p {
+    max-width: 90vw;
+    font-size: 15px;
+  }
+}
