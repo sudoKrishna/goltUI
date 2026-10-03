@@ -19,6 +19,7 @@ const groups = [
       { slug: "voice-glow", name: "Voice Glow" },
       { slug: "border-beam", name: "Border Beam" },
       { slug: "thinking-orbs", name: "Thinking Orbs" },
+      { slug: "disintegrate-on-scroll", name: "Disintegrate On Scroll" },
       { slug: "card", name: "Card", disabled: true },
     ],
   },
