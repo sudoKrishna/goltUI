@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function CTA() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-24 text-center">
+    <section className="mx-auto max-w-6xl px-6 py-24">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,12 +15,12 @@ export default function CTA() {
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">
           Ship faster with goltUI Pro
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-zinc-400">
+        <p className="mt-3 max-w-md text-zinc-400">
           A complete UI kit for developers who value speed, polish, and
           control, without wasting weeks on UI.
         </p>
 
-        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <motion.a
             href="#get-started"
             whileHover={{ scale: 1.03 }}
@@ -39,7 +39,7 @@ export default function CTA() {
           </motion.a>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
+        <div className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
           {[
             ["10+", "Full-page templates"],
             ["250+", "Reusable UI components"],
