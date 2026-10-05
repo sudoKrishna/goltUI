@@ -16,6 +16,11 @@ export default function Hero() {
       <h1 className="max-w-3xl text-4xl font-thin tracking-tight text-white sm:text-6xl">
         Ship,{" "}
         <ExpandWord />
+        <br />
+        with{" "}
+        <span className="font-normal italic [font-family:'Cormorant_Garamond',serif]">
+          golt components.
+        </span>
       </h1>
 
       <p className="mt-6 max-w-xl text-balance text-base text-zinc-400 sm:text-lg">

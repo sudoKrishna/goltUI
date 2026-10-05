@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <link
           rel="stylesheet"
           precedence="default"
-          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Silkscreen&family=Pixelify+Sans&family=Handjet&family=Roboto&family=Montserrat&family=Playfair+Display&family=Lora&family=Poppins&family=Oswald&family=Lobster&family=Pacifico&family=Bebas+Neue&family=Cormorant+Garamond&family=Space+Mono&family=Fira+Code&family=Anton&family=Caveat&family=Righteous&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Silkscreen&family=Pixelify+Sans&family=Handjet&family=Roboto&family=Montserrat&family=Playfair+Display&family=Lora&family=Poppins&family=Oswald&family=Lobster&family=Pacifico&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Space+Mono&family=Fira+Code&family=Anton&family=Caveat&family=Righteous&display=swap"
         />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
