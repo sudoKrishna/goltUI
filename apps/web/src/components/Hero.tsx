@@ -1,11 +1,8 @@
+import ExpandWord from "@/components/ExpandWord";
+
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center overflow-hidden px-6 pb-24 pt-28 text-center">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(120,119,198,0.25),transparent)]"
-      />
-
+    <section className="relative mx-auto flex max-w-6xl flex-col items-start overflow-hidden px-6 pb-24 pt-28 text-left">
       <a
         href="https://github.com/sudoKrishna/goltUI"
         target="_blank"
@@ -16,18 +13,15 @@ export default function Hero() {
         Now with 40+ animated blocks
       </a>
 
-      <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-        Ship beautiful UI
-        <br />
-        <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-500 bg-clip-text text-transparent">
-          without designing it
-        </span>
+      <h1 className="max-w-3xl text-4xl font-thin tracking-tight text-white sm:text-6xl">
+        Ship,{" "}
+        <ExpandWord />
       </h1>
 
       <p className="mt-6 max-w-xl text-balance text-base text-zinc-400 sm:text-lg">
-        goltUI is a copy-paste library of React + Tailwind components, blocks,
-        and templates — built for developers who want production-ready UI in
-        minutes, not weeks.
+        <span className="text-white">goltUI is a copy-paste library</span> of
+        React + Tailwind components, blocks, and templates — built for
+        developers who want production-ready UI in minutes, not weeks.
       </p>
 
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">

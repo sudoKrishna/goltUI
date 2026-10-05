@@ -115,7 +115,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="mx-auto max-w-5xl px-6 py-24">
+    <section id="faq" className="mx-auto max-w-6xl px-6 py-24">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,280px)_1fr]">
         <div>
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">
