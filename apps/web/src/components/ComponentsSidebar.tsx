@@ -20,6 +20,7 @@ const groups = [
       { slug: "border-beam", name: "Border Beam" },
       { slug: "thinking-orbs", name: "Thinking Orbs" },
       { slug: "disintegrate-on-scroll", name: "Disintegrate On Scroll" },
+      { slug: "liquid-glass", name: "Liquid Glass" },
       { slug: "card", name: "Card", disabled: true },
     ],
   },
