@@ -9,6 +9,8 @@ import TextReveal from "@/components/TextReveal";
 import { BorderBeam } from "@/components/border-beam";
 import { ThinkingOrb } from "@/components/thinking-orbs";
 import { LiquidGlassCard } from "@/components/liquid-glass";
+import TwitterCard from "@/components/TwitterCard";
+import FolderCard from "@/components/FolderCard";
 
 const featured = [
   {
@@ -89,6 +91,26 @@ const featured = [
         >
           Liquid Glass
         </LiquidGlassCard>
+      </div>
+    ),
+  },
+  {
+    slug: "twitter-card",
+    name: "Twitter Card",
+    description: "X/Twitter post card with a hover light-fill reveal.",
+    preview: (
+      <div className="pointer-events-none scale-[0.42]">
+        <TwitterCard />
+      </div>
+    ),
+  },
+  {
+    slug: "folder-card",
+    name: "Folder Card",
+    description: "An openable folder that fans out document cards on hover.",
+    preview: (
+      <div className="pointer-events-none scale-[0.5]">
+        <FolderCard />
       </div>
     ),
   },

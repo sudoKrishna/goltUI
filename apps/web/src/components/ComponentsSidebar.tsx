@@ -21,6 +21,8 @@ const groups = [
       { slug: "thinking-orbs", name: "Thinking Orbs" },
       { slug: "disintegrate-on-scroll", name: "Disintegrate On Scroll" },
       { slug: "liquid-glass", name: "Liquid Glass" },
+      { slug: "twitter-card", name: "Twitter Card" },
+      { slug: "folder-card", name: "Folder Card" },
       { slug: "card", name: "Card", disabled: true },
     ],
   },

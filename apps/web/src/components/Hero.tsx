@@ -1,4 +1,5 @@
 import HeroHeading from "@/components/HeroHeading";
+import BrowseCommand from "@/components/BrowseCommand";
 
 export default function Hero() {
   return (
@@ -21,20 +22,7 @@ export default function Hero() {
         developers who want production-ready UI in minutes, not weeks.
       </p>
 
-      <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-        <a
-          href="/blocks"
-          className="rounded-md border border-zinc-700 bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90"
-        >
-          Browse Blocks
-        </a>
-        <a
-          href="/docs"
-          className="rounded-md border border-zinc-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-zinc-500"
-        >
-          Read the Docs
-        </a>
-      </div>
+      <BrowseCommand />
     </section>
   );
 }
