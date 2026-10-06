@@ -1,8 +1,8 @@
-import ExpandWord from "@/components/ExpandWord";
+import HeroHeading from "@/components/HeroHeading";
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto flex max-w-6xl flex-col items-start overflow-hidden px-6 pb-24 pt-28 text-left">
+    <section className="relative mx-auto flex max-w-6xl flex-col items-start px-6 pb-24 pt-28 text-left">
       <a
         href="https://github.com/sudoKrishna/goltUI"
         target="_blank"
@@ -13,15 +13,7 @@ export default function Hero() {
         Now with 40+ animated blocks
       </a>
 
-      <h1 className="max-w-3xl text-4xl font-thin tracking-tight text-white sm:text-6xl">
-        Ship,{" "}
-        <ExpandWord />
-        <br />
-        with{" "}
-        <span className="font-normal italic [font-family:'Cormorant_Garamond',serif]">
-          golt components.
-        </span>
-      </h1>
+      <HeroHeading />
 
       <p className="mt-6 max-w-xl text-balance text-base text-zinc-400 sm:text-lg">
         <span className="text-white">goltUI is a copy-paste library</span> of
@@ -42,19 +34,6 @@ export default function Hero() {
         >
           Read the Docs
         </a>
-      </div>
-
-      <div className="mt-16 grid w-full max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8 text-left">
-        {[
-          ["40+", "UI Blocks"],
-          ["100%", "Copy & Paste"],
-          ["MIT", "Licensed"],
-        ].map(([stat, label]) => (
-          <div key={label}>
-            <div className="text-2xl font-semibold text-white">{stat}</div>
-            <div className="text-sm text-zinc-500">{label}</div>
-          </div>
-        ))}
       </div>
     </section>
   );

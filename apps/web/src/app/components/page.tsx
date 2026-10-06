@@ -4,6 +4,7 @@ import Button from "@/components/Buttons"
 import TextReveal from "@/components/TextReveal"
 import { BorderBeam } from "@/components/border-beam"
 import { ThinkingOrb } from "@/components/thinking-orbs"
+import { LiquidGlassCard } from "@/components/liquid-glass"
 
 const components = [
   {
@@ -113,6 +114,24 @@ const components = [
     ),
   },
   {
+    slug: "liquid-glass",
+    name: "Liquid Glass",
+    description: "Frosted glass surface with an optical displacement filter, real inset highlights, and glass buttons.",
+    available: true,
+    preview: (
+      <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+        <span className="absolute -top-8 -left-10 h-28 w-28 rounded-full bg-fuchsia-500/50 blur-2xl" />
+        <span className="absolute -right-8 -bottom-10 h-28 w-28 rounded-full bg-sky-500/50 blur-2xl" />
+        <LiquidGlassCard
+          glassSize="sm"
+          className="relative rounded-2xl px-4 py-2 text-xs text-white"
+        >
+          Liquid Glass
+        </LiquidGlassCard>
+      </div>
+    ),
+  },
+  {
     slug: "card",
     name: "Card",
     description: "Content card with hover motion.",
@@ -137,24 +156,32 @@ export default function ComponentsPage() {
             <Link
               key={c.slug}
               href={`/components/${c.slug}`}
-              className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/20 hover:bg-white/[0.06]"
+              className="group block rounded-t-[14px] rounded-b-[6px] border border-[#262626] bg-[#1a1a1a] p-4 pb-0 shadow-[0_18px_40px_-14px_rgba(0,0,0,.55),inset_0_1px_0_rgba(255,255,255,.04)] transition-transform duration-200 hover:-translate-y-1 [font-family:'Instrument_Sans',system-ui,sans-serif]"
             >
-              <div className="mb-6 flex h-32 items-center justify-center overflow-hidden rounded-lg bg-zinc-950">
+              <div className="relative flex h-[335px] items-center justify-center overflow-hidden rounded-[22px] border border-[#2b2b2b] bg-[#161616]">
                 {c.preview}
               </div>
-              <h3 className="font-medium text-white">{c.name}</h3>
-              <p className="mt-1 text-sm text-zinc-500">{c.description}</p>
+              <div className="flex h-16 items-center justify-between px-[10px]">
+                <span className="text-[19px] font-medium tracking-tight text-[#f2f2f2]">
+                  {c.name}
+                </span>
+                <span className="text-base text-[#8a8a8a]">{c.slug}</span>
+              </div>
             </Link>
           ) : (
             <div
               key={c.slug}
-              className="flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] p-6 opacity-50"
+              className="flex flex-col rounded-t-[14px] rounded-b-[6px] border border-[#262626] bg-[#1a1a1a] p-4 pb-0 opacity-50 shadow-[0_18px_40px_-14px_rgba(0,0,0,.55),inset_0_1px_0_rgba(255,255,255,.04)] [font-family:'Instrument_Sans',system-ui,sans-serif]"
             >
-              <div className="mb-6 flex h-32 items-center justify-center rounded-lg bg-zinc-950 text-xs text-zinc-600">
+              <div className="flex h-[335px] items-center justify-center rounded-[22px] border border-[#2b2b2b] bg-[#161616] text-xs text-zinc-600">
                 Coming soon
               </div>
-              <h3 className="font-medium text-white">{c.name}</h3>
-              <p className="mt-1 text-sm text-zinc-500">{c.description}</p>
+              <div className="flex h-16 items-center justify-between px-[10px]">
+                <span className="text-[19px] font-medium tracking-tight text-[#f2f2f2]">
+                  {c.name}
+                </span>
+                <span className="text-base text-[#8a8a8a]">{c.slug}</span>
+              </div>
             </div>
           )
         )}
