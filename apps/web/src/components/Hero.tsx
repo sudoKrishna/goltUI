@@ -3,7 +3,7 @@ import BrowseCommand from "@/components/BrowseCommand";
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto flex max-w-6xl flex-col items-start px-6 pb-24 pt-28 text-left">
+    <section className="relative mx-auto flex max-w-6xl flex-col items-start px-6 pt-20 pb-24 text-left sm:pt-28">
       <a
         href="https://github.com/sudoKrishna/goltUI"
         target="_blank"

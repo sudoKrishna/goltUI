@@ -61,7 +61,7 @@ export default function BrowseCommand() {
   };
 
   return (
-    <div className="mt-12 flex w-fit items-center [font-family:'Instrument_Sans',system-ui,sans-serif]">
+    <div className="mt-12 flex w-full flex-wrap items-center gap-3 [font-family:'Instrument_Sans',system-ui,sans-serif] sm:w-fit sm:flex-nowrap sm:gap-0">
       {/* button is always visible; only the dashed ring reveals around it */}
       <div className="relative shrink-0 p-2.5">
         <motion.span
@@ -90,7 +90,7 @@ export default function BrowseCommand() {
       </div>
 
       {/* connector: circle, then line */}
-      <div aria-hidden className="mx-3 flex items-center">
+      <div aria-hidden className="mx-3 hidden items-center sm:flex">
         <motion.span
           initial={false}
           animate={started ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
@@ -118,10 +118,10 @@ export default function BrowseCommand() {
           ease: "easeOut",
           delay: started ? 1.8 : 0,
         }}
-        className="flex shrink-0 items-center gap-4 rounded-2xl border border-white/10 bg-[#0e0e0e] px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,.03)]"
+        className="flex w-full shrink-0 items-center gap-3 rounded-2xl border border-white/10 bg-[#0e0e0e] px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,.03)] sm:w-auto sm:gap-4"
       >
         <span className="font-mono text-xs text-zinc-600 select-none">$</span>
-        <code className="font-mono text-sm whitespace-nowrap text-zinc-400">
+        <code className="font-mono text-xs whitespace-nowrap text-zinc-400 sm:text-sm">
           {COMMAND}
         </code>
         <button
