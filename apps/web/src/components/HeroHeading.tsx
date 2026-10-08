@@ -83,7 +83,7 @@ function DrawBox({ show }: { show: boolean }) {
 /** "36 px" label + measurement line, on the left of "Ship". */
 function SizeLabel({ show }: { show: boolean }) {
   return (
-    <span className="pointer-events-none absolute top-1/2 right-full z-20 mr-1 flex -translate-y-1/2 items-center gap-1.5 whitespace-nowrap">
+    <span className="pointer-events-none absolute top-1/2 right-full z-20 mr-1 hidden -translate-y-1/2 items-center gap-1.5 whitespace-nowrap sm:flex">
       <motion.span
         initial={false}
         animate={{ opacity: show ? 1 : 0 }}

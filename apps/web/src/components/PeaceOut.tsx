@@ -24,7 +24,7 @@ export default function PeaceOut() {
 
   return (
     <section className="w-full px-6 pb-16 pt-8">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
         <div className="flex items-center gap-3">
           <span className="text-[10px] font-medium tracking-[0.25em] text-zinc-600 uppercase">
             peace out

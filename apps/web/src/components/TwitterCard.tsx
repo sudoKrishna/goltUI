@@ -17,7 +17,7 @@ const iconProps = {
   strokeWidth: 2,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
-  className: "h-[22px] w-[22px]",
+  className: "h-5 w-5 sm:h-[22px] sm:w-[22px]",
 };
 
 const CommentIcon = () => (
@@ -176,22 +176,22 @@ export default function TwitterCard() {
         transition={{ duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
       />
 
-      <div className="relative z-10 p-[45px]">
+      <div className="relative z-10 p-6 sm:p-[45px]">
         {/* header */}
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-4">
             <img
               src="/avatar.png"
               alt="Krishna"
-              className="h-[70px] w-[70px] rounded-full bg-white object-cover"
+              className="h-14 w-14 rounded-full bg-white object-cover sm:h-[70px] sm:w-[70px]"
             />
             <div>
               <div
-                className={`flex items-center gap-2 text-[26px] font-medium transition-colors duration-500 ${strong}`}
+                className={`flex items-center gap-2 text-xl font-medium transition-colors duration-500 sm:text-[26px] ${strong}`}
               >
                 Krishna
               </div>
-              <div className="text-[21px] text-[#8a8a8a]">@cha73066</div>
+              <div className="text-sm text-[#8a8a8a] sm:text-[21px]">@cha73066</div>
             </div>
           </div>
 
@@ -201,7 +201,7 @@ export default function TwitterCard() {
             target="_blank"
             rel="noreferrer"
             aria-label="Open on X"
-            className="flex h-[70px] w-[70px] items-center justify-center rounded-2xl text-white"
+            className="flex h-14 w-14 items-center justify-center rounded-2xl text-white sm:h-[70px] sm:w-[70px]"
             animate={{
               backgroundColor: hovered ? "#000000" : "rgba(0,0,0,0)",
               boxShadow: hovered
@@ -211,23 +211,23 @@ export default function TwitterCard() {
             }}
             transition={{ duration: 0.45 }}
           >
-            <XLogo className="h-9 w-9" />
+            <XLogo className="h-7 w-7 sm:h-9 sm:w-9" />
           </motion.a>
         </div>
 
         {/* tweet */}
         <p
-          className={`mt-10 text-[24px] leading-9 transition-colors duration-500 ${strong}`}
+          className={`mt-8 text-lg leading-7 transition-colors duration-500 sm:mt-10 sm:text-[24px] sm:leading-9 ${strong}`}
         >
           accidently stepped into design.
         </p>
 
-        <div className="mt-6 text-[20px] text-[#8a8a8a]">
+        <div className="mt-6 text-sm text-[#8a8a8a] sm:text-[20px]">
           {posted}
         </div>
 
         {/* stats / actions */}
-        <div className="mt-6 flex items-center gap-8 text-[20px] text-[#8a8a8a]">
+        <div className="mt-6 flex items-center gap-6 text-sm text-[#8a8a8a] sm:gap-8 sm:text-[20px]">
           {/* comment */}
           <button
             type="button"
@@ -301,7 +301,7 @@ export default function TwitterCard() {
           onMouseLeave={() => setHovered(false)}
           onFocus={() => setHovered(true)}
           onBlur={() => setHovered(false)}
-          className={`mt-10 flex h-[70px] items-center justify-center gap-3 rounded-full border-2 text-[24px] transition-colors duration-500 ${
+          className={`mt-8 flex h-14 items-center justify-center gap-3 rounded-full border-2 text-lg transition-colors duration-500 sm:mt-10 sm:h-[70px] sm:text-[24px] ${
             hovered
               ? "border-[#cfcfcf] text-[#1a1a1a]"
               : "border-[#333] text-white"
